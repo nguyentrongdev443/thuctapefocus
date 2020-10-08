@@ -658,9 +658,8 @@ footer{
 }
 hr{
 	width: 1224px;
-	height: 1px;
 	margin: 0 auto;
-    background-color: #59595b;
+    color: #3D3D3D;
 }
 .footer-social-list{
 	padding-top: 40px;
@@ -711,7 +710,45 @@ hr{
 	padding-top: 15px;
 	font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,Sans-Serif;
 }
-
+.footer-menu-hafl{
+	width: 1224px;
+	margin: 40px auto;
+	display: grid;
+	grid-template-columns: 1fr 450px;
+    grid-column-gap: 24px;
+	grid-row-gap: 0;
+	font-family: "TheSerifB","Helvetica Neue",Arial,Helvetica,Sans-Serif;
+}
+.footer-newletter-title{
+	
+	font-size: 16px;
+	font-weight: 600;
+	color: #8c8c8e;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+}
+.footer-newsletter-subtitle{
+	font-size: 14px;
+    line-height: 23px;
+	color: #8c8c8e;
+}
+.footer-menu-newsletter a{
+	display: inline-block;
+	color: white;
+	margin-top: 30px;
+	padding-left: 15px;
+	background-color: #79ad36;
+	border-radius: 3px;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 12px 12px;
+	position: relative;
+	font-weight: 600;
+	font-size: 12px;
+}
+.footer-menu-newsletter a:hover{
+	background-color: darkolivegreen;
+}
 
 
 
