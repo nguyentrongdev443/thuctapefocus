@@ -432,8 +432,8 @@ a{
 	background-color: #129D3A;
 	color: #000000;
 }
- .menu-thu2>a:hover{
-	color: #79ad36;
+ div.menu-thu2>ul>li>a:hover,ul.menu-thu2>li>a:hover{
+	color: darkgreen;
 }
 .clients-say{
 	width: 100%;
@@ -658,6 +658,9 @@ footer{
 }
 .footer-menu-item{
 	margin-bottom: 20px;
+}
+.footer-menu-item a:hover{
+	color: #59595b;
 }
 hr{
 	width: 1224px;
