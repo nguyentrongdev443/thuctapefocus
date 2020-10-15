@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
 <script src="jquery-3.5.1.min.js"></script>
 <script>
 	$(document).ready(function(){
@@ -126,7 +127,7 @@
 		<input type="search" class="input-text search-form-input" placeholder="Search here...">
     </form>
     <div class="content">
-        <div class="content-form__container">
+        <div class="contact-form__container">
             <div class="o-page-title">
                 <h1>Contact us</h1>
                 <p>
@@ -136,7 +137,77 @@
                 </p>
             </div>
             <div class="contact-us__container">
-                <form action="#" class="c-contact-form" id="c-contact-form"></form>
+                <form action="#" class="c-contact-form" id="c-contact-form">
+                    <input type="hidden" name="action" value="contact">
+					<input type="hidden" name="contact-track" value="contact">
+					<div class="c-contact-form__field">
+						<label for="c-contact-form-name" class="required">Name</label>
+						<input type="text" name="contact-name" id="c-contact-form-name" class="c-contact-form__input" value required>
+					</div>
+					<div class="c-contact-form__field">
+						<label for="c-contact-form-email" class="required">Email</label>
+						<input type="text" name="contact-email" id="c-contact-form-email" class="c-contact-form__input" value required>
+					</div>
+					<div class="c-contact-form__field c-contact-form__field--full-width">
+						<label for="c-contact-form-website">
+							Website
+							<span>(optional)</span>
+						</label>
+						<input type="text" name="contact-website" id="c-contact-form-website" class="c-contact-form__input" value placeholder="http://">
+					</div>
+					<div class="c-contact-form__field c-contact-form__field--full-width">
+						<label for="c-contact-form-message" class="required">How can we help you?</label>
+						<textarea name="contact-massage" id="c-contact-form-message" class="c-contact-form__textarea" required></textarea>
+					</div>
+					<input type="text" id="inchoo_track_1" name="inchoo_track_1" value="" autocomplete="off" style="display: none;">
+					<input type="text" id="" name="inchoo_track_2" value="earth" autocomplete="off" style="display: none;">
+					<div class="c-contact-form__submit">
+						<p class="c-contact-form__guarantee-note">
+							100% privacy guaranteed.
+							<br>
+							Check how we can help your business!
+						</p>
+						<button type="submit" class="btn-gray c-contact-form__submit-btn">Send</button>
+					</div>
+                </form>
+                <div class="contact-us__details">
+					<div class="contact-us__give-us-call">
+						<h2>Give us a call!</h2>
+						<a href="#" class="btn-green btn">
+							<i class="fas fa-phone"></i>
+							<span>US: +1 815 671 4208</span>
+						</a>
+						<span>
+							or
+							<a href="#" title="Schedule a call">
+								<strong>schedule a call</strong>
+							</a>
+						</span>
+						<p>
+							<a href="#"><i class="fas fa-phone"></i>
+								CRO: +385 31 200 729
+							</a>
+						</p>
+						<p>
+							<a href="#"><i class="fas fa-fax"></i>
+								+385 31 777 020
+							</a>
+						</p>
+						<p>
+							<a href="#"><i class="far fa-envelope"></i>
+								web@inchoo.net
+							</a>
+						</p>
+						<div class="contact-us__address">
+							<p>Inchoo d.o.o</p>
+							<p>
+								Office: Trg slobode 6, HR-31000 Osijek, Croatia
+								(<a href="#" title="See Map">See Map</a>)
+							</p>
+							<p>EU VAT ID: HR79343687407</p>
+						</div>
+					</div>
+                </div>
             </div>
         </div>
     </div>
@@ -297,10 +368,10 @@
 		<a href="#"><i class="far fa-envelope"></i>
 			web@inchoo.net
 		</a>
-		<a href="#"><i class="fas fa-phone-alt"></i>
+		<a href="#"><i class="fas fa-phone"></i>
 			CRO: +385 31 200 729
 		</a>
-		<a href="#"><i class="fas fa-phone-alt"></i>
+		<a href="#"><i class="fas fa-phone"></i>
 			US: +1 815 671 4208
 		</a>
 	</div>
