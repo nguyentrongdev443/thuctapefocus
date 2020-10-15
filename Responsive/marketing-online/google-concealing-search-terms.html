@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google is concealing your search terms, and it is bad</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="../jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".header-button-menu").click(function(){		
+			if($(".header-button-menu i").hasClass("fas fa-bars")){	
+				$("#header-menu-js").addClass("menu-active");
+				$(".header-button-menu i").removeClass("fas fa-bars");
+				$(".header-button-menu i").toggleClass("fa fa-times");
+				$(".page-overlay").toggleClass("is-visible");
+				if($(".header-button-search i").hasClass("fa fa-times")){
+					$(".header-button-search i").removeClass("fa fa-times");
+					$(".header-button-search i").toggleClass("fas fa-search");
+					$(".search-form").removeClass("is-visible");	
+					$(".page-overlay").toggleClass("is-visible");	
+					$("body").addClass("prevent-scroll");			
+				}else{
+					$("#header-menu-js").addClass("menu-active");
+					$("body").addClass("prevent-scroll");
+					
+				}
+			}else{
+				$("#header-menu-js").removeClass("menu-active");
+				$(".header-button-menu i").removeClass("fa fa-times");
+				$(".header-button-menu i").toggleClass("fas fa-bars");
+				$("body").removeClass("prevent-scroll");
+				$(".page-overlay").removeClass("is-visible");
+			}
+		});
+		$(".header-button-search").click(function(){
+			if($(".header-button-search i").hasClass("fas fa-search")){
+				$(".header-button-search i").removeClass("fas fa-search");
+				$(".header-button-search i").toggleClass("fa fa-times");
+				$(".search-form").toggleClass("is-visible");
+				$(".page-overlay").toggleClass("is-visible");
+				
+				if($(".header-button-menu i").hasClass("fa fa-times")){
+					$("#header-menu-js").removeClass("menu-active");
+					$(".header-button-menu i").removeClass("fa fa-times");
+					$(".header-button-menu i").toggleClass("fas fa-bars");
+					$(".page-overlay").toggleClass("is-visible");
+					$("body").addClass("prevent-scroll");			
+				}else{
+					$("body").addClass("prevent-scroll");
+				}
+			}else{
+				$(".header-button-search i").toggleClass("fas fa-search");
+				$(".header-button-search i").removeClass("fa fa-times");
+				$(".search-form").removeClass("is-visible");
+				$(".page-overlay").removeClass("is-visible");
+				$("body").removeClass("prevent-scroll");
+			}
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$(".footer-menu__title").click(function(){
+			if($(this).hasClass("footer-menu__title--is-visible")){
+				$(this).removeClass("footer-menu__title--is-visible");
+				$(this).next().slideUp(500);
+			}else{
+				$(this).addClass("footer-menu__title--is-visible");
+				$(".footer-menu__list").slideUp(100);
+				$(this).next().slideDown(500);
+			}
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$(".cookie-banner_btn").click(function(){
+			$(".cookie-banner").css("display","none")
+		});
+	})
+</script>
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+<body class="blog">
+<!--HEADER-->
+<header id="header" class="header">
+    <div class="header-grid">
+		<!--LOGO-->
+		<a class="logo-trangchu" href="../index.html" rel="home" title="Inchoo"></a>
+		<!--MENU-->
+        <nav class="menu" id="header-menu-js">
+            <ul id="menu-header-list" class="menu-list">
+                <li class="menu-item"><a href="../index.html">Home</a></li>
+                <li class="menu-item" id="menu-item-active"><a href="../blog.html">Blog</a></li>
+                <li class="menu-item"><a href="index.html">Porfolio</a></li>
+                <li class="menu-item"><a href="index.html">Services</a></li>
+                <li class="menu-item" ><a href="index.html">About</a></li>
+                <li class="menu-item"><a href="../contact.html">Contact</a></li>
+			</ul>     
+		</nav>
+		<!--BUTTON SEARCH-->
+		<button type="button" class="header-button-search header-button">
+			<i class="fas fa-search"></i>
+			<span> Search</span>
+		</button>
+		<!--BUTTON HIRE US-->
+		<button type="button" class="header-button-hire-us header-button">
+			<i class="far fa-envelope"></i>
+			<span> Hire Us</span>
+		</button>
+		<!--BUTTON MENU-->
+		<button type="button" class="header-button-menu header-button">
+			<i class="fas fa-bars"></i></i>
+			<span> Menu</span>
+	</button>
+    </div>
+</header>
+<!--BLOG MENU-->
+<nav class="blog-menu">
+    <ul id="menu-blog-menu" class="blog-menu-list">
+        <li class="blog-menu-item">
+            <a href="blog.html">All</a>
+        </li>				
+        <li class="blog-menu-item">
+            <a href="#">Magento</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">Magento2</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">UX/UI Design</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">eCommerce Talk</a>
+        </li>
+        <li class="blog-menu-item blog-menu-active">
+            <a href="#">Online Marketing</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">Dev Talk</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">Life at Inchoo</a>
+        </li>
+    </ul>
+</nav>
+<!--MAIN-->
+<main class="main">
+    <form action="#" class="search-form">
+		<input type="search" class="input-text search-form-input" placeholder="Search here...">
+    </form>
+    <div class="content-single-article">
+        <div class="article__container">
+            <article class="c-article">
+                <header class="c-article__header">
+                    <h1 class="c-article__title">Google is concealing your search terms, and it is bad</h1>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Oct 07, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="google-concealing-search-terms.html">
+                        <img src="../images/google_concealing-inchoo-615x243.jpg" title="Google is concealing your search terms, and it is bad">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>Let’s first read the following premise: For successful optimization and revenue-generating Google Ads campaigns, you need access to ALL search terms for which users clicked on your ads.</p>
+                    <p>It’s simple logic. You want to know what users searched for when they clicked on your ads, and then converted. Am I right?</p>
+                    <p>Not if you ask Google about it. Read on and find out why Google is behaving f…[CENSORED] bad with this one.<span id="more-38575"></span></p>
+                    <p>&nbsp;</p>
+                    <h2>Why doesn’t Google show all search terms?</h2>
+                    <p>Google has decided to not show all the search terms for which users (customers) clicked on your ads in the <a href="#" rel="noopener">search terms report</a>. The explanation for this is, and I am going to carefully choose words here, funny.</p>
+                    <p><img class="aligncenter size-full" src="../images/Google-search-terms-significant-number.jpg" alt="Google search terms significant number"></p>
+                    <p>To quote Google here:</p>
+                    <blockquote><p><span style="font-weight: 400;">“This only includes terms that were used by a <strong>significant number of people</strong> to search.”</span></p></blockquote>
+                    <p>The most important thing here is the “significant number of people”.</p>
+                    <p>But what number is significant? Two? Ten? Twenty?<br>
+                    Over what time? Week? Month?</p>
+                    <p>But never mind those questions. Let’s consider this…</p>
+                    <p>Did you know that around <strong>15% of all daily searches on Google are new?</strong><br>
+                    Never before seen!<br>
+                    Never before searched for!</p>
+                    <p>For the sake of this blog post, let’s imagine that we are targeting all searches on Google with our Google ads. Around 15% of all searches are <strong>first-time occurrences</strong> and because of that, we will <strong>probably not see them in our search terms report.</strong></p>
+                    <p>By the way, there are around <a href="#" rel="noopener">4.5 billion</a> (4.500.000.000) Google searches daily. 15% of that is 675 million (675.000.000).<br>
+                    675 million totally new searches every day.</p>
+                    <p>If we want to optimize our campaigns – <strong>can we really do our job without those “insignificant” number of people/searches?</strong><br>
+                    No, we can’t.</p>
+                    <p>Google’s explanation is funny because <strong>there is NO “insignificant” number of people</strong>. Read on for the proof of this statement.</p>
+                    <p>&nbsp;</p>
+                    <h2>How bad can it be?</h2>
+                    <p>The impact of this can range from very small to being very, very bad.</p>
+                    <p><img class="aligncenter size-full" src="../images/example-difference-number-search-terms.jpg" alt="example difference number search terms" width="505" height="535"></p>
+                    <p>In the above example, we DON’T SEE around 16% of all search terms! Google thinks that those search terms we are not seeing are insignificant. Are they?</p>
+                    <p>Let’s look at the same example, only now let’s focus on the <strong>number of conversions:</strong></p>
+                    <p><img class="aligncenter size-full" src="../images/diferent-number-conversions-search-terms.jpg" alt="diferent number conversions search terms" width="619" height="543"></p>
+                    <p><strong>One of those “insignificant numbers of people” converted!</strong> But, because of Google, I can not see for which search term.</p>
+                    <p>Let us imagine this: every month there is a certain search phrase for which we will make money (conversions). We can not see that search phrase. During the entire year, there could be 12 conversions for those search terms which we can not see. And we can not do anything about it. We can not optimize our ad groups nor our ads for it.</p>
+                    <p>Funny, isn’t it?</p>
+                    <p>&nbsp;</p>
+                    <h2>Is there a solution to see all search terms?</h2>
+                    <p>At the moment – there is. But I am afraid how much longer will we be able to use it.</p>
+                    <p>We can go to our Analytics account, and under Acquisition choose Google Ads and then Campaigns.</p>
+                    <p><img class="aligncenter size-full" src="../images/google-analytics-ads-campaigns-navigation.jpg" alt="google analytics ads campaigns navigation" width="250" height="171"></p>
+                    <p>After that just use the secondary dimension and choose Search Query.</p>
+                    <p><img class="aligncenter size-full" src="../images/analytics-secondary-dimension-search-query.jpg" alt="analytics secondary dimension search query" width="228" height="237"></p>
+                    <p>There is also an option to directly choose Search Queries under Google Ads, but on some accounts, I have seen the same results as in the Google Ads system. So I’m recommending to use the secondary dimension under Campaigns.</p>
+                    <p>&nbsp;</p>
+                    <h2>The future is targeting without keywords</h2>
+                    <p>I must confess that when I first saw this problem, I thought it was a bug. As time passed I was increasingly starting to ask myself: <del>WTF?</del> Why is Google doing this?</p>
+                    <p>This is <strong>simple denial of information necessary for us to optimize our campaigns</strong>. I realize that not all marketing agencies are doing this type of optimization (only the best ones are doing it), but that can not be the reason.</p>
+                    <p>Unless there is something else in play.</p>
+                    <p>What if Google is preparing the stage for <strong>no-keyword-targeting Search campaigns</strong>?</p>
+                    <p>Campaigns in which we will only include our landing page and select interesting audiences. No targeted keywords or negative keywords. Of course, smart bidding will then decide when our ad will show up.</p>
+                    <p>I personally have no problem with smart bidding – but what I do want is <strong>more control</strong> over our campaigns, so we can properly optimize them and show that we can still do a better job than any machine. 😉</p>
+                    <p>What do you think?<br>
+                    Is this a bug?<br>
+                    Or is this a (future) feature?</p>
+                </div>
+                <div class="c-share">
+                    <a href="#" class="btn btn-facebook btn-social"><span class="fa fa-facebook"></span></a>
+                    <a href="#" class="btn btn-twitter btn-social"><span class="fa fa-instagram"></span></a>
+                    <a href="#" class="btn btn-linkedin btn-social"><span class="fa fa-linkedin"></span></a>
+                </div>
+            </article>
+            <div class="post-service-links__cont">
+                <h2 class="post-service-links__title">Related Inchoo Services</h2>
+                <ul class="post-service-links__list">
+                    <li class="post-service-links__list-item"><a href="#" class="post-service-links__link" title="eComerece PPC Management">eCommerce PPC Management</a></li>
+                    <li class="post-service-links__list-item"><a href="#" class="post-service-links__link" title="PPC Audit Services">PPC Audit Services</a></li>
+                </ul>
+            </div>
+            <div class="c-article-published-in">
+                <div class="c-article-published-in__categories">
+                    <span>Published in:</span>
+                    <ul class="post-categories">
+                        <li>
+                            <a href="#" rel="tag">Online Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="c-article-published-in__btn btn btn-green" href="#" title="Leave a comment">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Leave a comment</span>
+                </a>
+            </div>
+            <div class="o-article-author">
+                <a href="#" class="o-article-author__avatar" title="Davorin Cernoga">
+                    <img src="../images/davorin-cernoga-1.jpg" width="80" height="80" alt="">
+                </a>
+                <div class="o-article-author__text">
+                    <h4 class="o-article-author__name">Davorin Cernoga</h4>
+                    <span class="o-article-author__title">- Digital Marketing Specialist</span>
+                    <p class="o-article-author__short-bio">Digital Marketing Specialist with 12 years of experience in content, SEO and PPC strategy and execution.</p>
+                    <p class="o-article-author__links">Read more
+                        <a href="#">posts by Davorin</a>
+                        / Visit
+                        <a href="#">Davorin's profile</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="c-article-related">
+            <div class="widget c-article-related__container">
+                <h3 class="widget-title">
+                    You made it all the way down here so you must have enjoyed this post! You may also like:
+                </h3>
+                <div class="o-article-card">
+                    <a href="#" class="o-article-card__image-link">
+                        <img src="../images/google-monthly-budget_inchoo-615x243.jpg">
+                        <div class="o-article-card__author-img">
+                            <img src="../images/davorin-cernoga-1.jpg" width="36px" height="36px">
+                        </div>
+                        <div class="o-article-card__meta">
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                            <time class="o-article-card__date">Sep 02, 2020</time>
+                            |
+                            <a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+                        </div>
+                        <h2 class="o-article-card__title h2">
+                            <a href="#">How does Google calculate the monthly budget of your campaigns?</a>
+                        </h2>
+                    </a>
+                </div>
+                <div class="o-article-card">
+                    <a href="#" class="o-article-card__image-link">
+                        <img src="../images/monthly-charge-Gads_inchoo-615x243.jpg">
+                        <div class="o-article-card__author-img">
+                            <img src="../images/davorin-cernoga-1.jpg" width="36px" height="36px">
+                        </div>
+                        <div class="o-article-card__meta">
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                            <time class="o-article-card__date">Aug 14, 2020</time>
+                            |
+                            <a href="#"><i class="fas fa-comment-alt"></i>  1</a>
+                        </div>
+                        <h2 class="o-article-card__title h2">
+                            <a href="#">Monthly Charging Limit Reached in Google Ads?</a>
+                        </h2>
+                    </a>
+                </div>
+                <div class="o-article-card">
+                    <a href="#" class="o-article-card__image-link">
+                        <img src="../images/negative-key-feauterd-615x243.jpg">
+                        <div class="o-article-card__author-img">
+                            <img src="../images/davorin-cernoga-1.jpg" width="36px" height="36px">
+                        </div>
+                        <div class="o-article-card__meta">
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                            <time class="o-article-card__date">Jul 02, 2019</time>
+                            |
+                            <a href="#"><i class="fas fa-comment-alt"></i>  5</a>
+                        </div>
+                        <h2 class="o-article-card__title h2">
+                            <a href="#">Can We Optimize Google Ads Negative Keywords?</a>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="c-article-comments">
+            <div class="comment-respond">
+                <h3 class="comment-reply-title">Leave a Reply
+                    <small>
+                        <a href="#" rel="nofollow" style="display: none;">Cancel reply</a>
+                    </small>
+                </h3>
+                <form action="#" id="comment-form" class="comment-form">
+                    <p class="comment-notes">
+                        <span id="email-notes">Your email address will not be published.</span>
+                        Required fields are marked
+                        <span class="required">*</span>
+                    </p>
+                    <p class="comment-form-comment">
+                        <label for="comment"  class="required">Comment</label>
+                        <textarea name="comment" id="commnet" rows="8" style="margin-top: 0; margin-bottom: 0; height: 170px;"></textarea>
+                    </p>
+                    <p class="form-allowed-tags">You may use these 
+                        <abbr title="HyperText Markup Language">HTML</abbr> 
+                        tags and attributes: 
+                        <code>&lt;a href="" title=""&gt; &lt;blockquote cite=""&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt;
+                        </code>. You may use following syntax for source code: 
+                        <code>&lt;pre&gt;&lt;code&gt;$current = "Inchoo";&lt;/code&gt;&lt;/pre&gt;
+                        </code>
+                        .
+                    </p>
+                    <p class="comment-form-author">
+                        <label for="author"  class="required">Name</label>
+                        <input type="text" id="author" name="author" value required>
+                    </p>
+                    <p class="comment-form-email">
+                        <label for="email"  class="required">Email</label>
+                        <input type="text" id="email" name="email" value required>
+                    </p>
+                    <p class="comment-form-url">
+                        <label for="url"  class="required">Website</label>
+                        <input type="text" id="url" name="url" value required>
+                    </p>
+                    <p class="form-submit">
+                        <input type="submit" name="submit" id="submit" class="submit" value="Post Comment">
+                        <input type="hidden" name="comment_post_ID" id="comment_post_ID" value="38575">
+                        <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                    </p>
+                    <p style="display: none;">
+                        <input type="hidden" name="akismet_comment_nonce" id="akismet_comment_nonce">
+                    </p>
+                    <input type="text" name="comment_track_1" id="comment_track_1" value autocomplete="off" style="display: none;">
+                    <input type="text" name="comment_track_2" id value autocomplete="off" style="display: none;">
+                    <p style="display: none;"></p>
+                    <input type="hidden" name="ak_js" id="ak_js">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- HRIE US CONTAINER-->
+<div class="hire-us">
+	<div class="hire-us-cont">
+		<div class="hire-us-title h2">Tell us about your project</div>
+		<p class="hire-us-subtitle">Drop us a line. We'd love to know more about your project.</p>
+		<button type="button" class="btn-gray">
+			<i class="far fa-envelope"></i>
+			<span> Hire Us</span>
+		</button>
+	</div>
+</div>
+<!--FOOTER-->
+<footer class="footer">
+	<div class="footer-menu__container">
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Blog categories</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">All</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Magento</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento2</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">UX/UI Design</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce Talk</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Online Marketing</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Dev Talk</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Life at Inchoo</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Audits</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">SEO Audit</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Technical Audit</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce UX Audit</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">PPC Audit Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Google Analytics Audit</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Magento</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">About Magento</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Magento Website Development Process</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento Development Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento 2 Development</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Custom Magento Development</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento 2 Migration Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento Design</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Marketing</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce PPC Management</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Google Shopping Management</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Google Tag Manager</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Featured Services</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">Fastly</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Pimcore</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">ShpperHQ</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Klevu</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+	</div>
+	<!--hr-->
+	<div class="footer-hr__container">
+		<hr>
+	</div>
+	<div class="footer-menu__container footer-menu-container-hafl">
+		<div class="footer-menu">
+			<div class="footer-service-dev">
+				<img src="../images/professional_solutions_partner_v.svg" width="86px" height="87px">
+				<img src="../images/badge-magento-2-solution-specialist.png" width="56px" height="100px">
+				<img src="../images/badge-magento-2-professional-developer.png" width="56px" height="100px">
+				<img src="../images/badge-magento-2-professional-frontend-developer.png" width="56px" height="100px">
+				<img src="../images/google_premium_partner.png"  width="126px" height="63px">
+			</div>
+		</div>
+		<div class="footer-menu">
+			<div class="footer-menu-newsletter">
+				<div class="footer-newletter-title">Newsletter</div>
+				<p class="footer-newsletter-subtitle">
+					Sign up for our newsletter to get your dose of useful eCommerce, Magento and Inchoo news and events.
+				</p>
+				<a class="button-newletter btn-green btn" hre="#" title="Subscribe to our newsletter">Subscribe to our newsletter</a>
+			</div>
+		</div>
+	</div>
+	<!--hr-->
+	<div class="footer-hr__container">
+		<hr>
+	</div>
+	<!--Footer social list-->
+	<ul class="footer-social-list">
+		<li><a href="#" title="Find us on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+		<li><a href="#" title="Find us on Twitter"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="#" title="Find us on LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+		<li><a href="#" title="Find us on Instagram"><i class="fab fa-instagram"></i></a></li>
+	</ul>
+	<!--Footer contact-->
+	<div class="footer-contact">
+		<a href="#"><i class="far fa-envelope"></i>
+			web@inchoo.net
+		</a>
+		<a href="#"><i class="fas fa-phone-alt"></i>
+			CRO: +385 31 200 729
+		</a>
+		<a href="#"><i class="fas fa-phone-alt"></i>
+			US: +1 815 671 4208
+		</a>
+	</div>
+	<!--Footer back to top-->
+	<a href="#header" class="footer-back-to-top" title="Back to top">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+	<!--Footer copyright-->
+	<div class="footer-copyright">		
+		2020 © Inchoo. All rights reserved. 
+		<a href="#" title="Privacy & Data Protection Policy">Privacy & Data Protection Policy</a>
+	</div>
+</footer>
+<div class="page-overlay"></div>
+<div id="outdated"></div>
+<div class="cookie-banner" style="opacity: 1;">
+	<span class="cookie-banner-message">
+		We use cookies on our website to support technical features that enhance your user experience. We also use analytics. To opt-out from analytics, 
+		<a href="#" title="Click for more information" title="click for more information">click for more information</a>
+		.
+    
+	</span>
+	<div class="cookie-banner-btn-cont">
+		<button type="button" class="btn-green cookie-banner_btn" title="I've read it">I've read it</button>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inchoo's Blog</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".header-button-menu").click(function(){		
+			if($(".header-button-menu i").hasClass("fas fa-bars")){	
+				$("#header-menu-js").addClass("menu-active");
+				$(".header-button-menu i").removeClass("fas fa-bars");
+				$(".header-button-menu i").toggleClass("fa fa-times");
+				$(".page-overlay").toggleClass("is-visible");
+				if($(".header-button-search i").hasClass("fa fa-times")){
+					$(".header-button-search i").removeClass("fa fa-times");
+					$(".header-button-search i").toggleClass("fas fa-search");
+					$(".search-form").removeClass("is-visible");	
+					$(".page-overlay").toggleClass("is-visible");	
+					$("body").addClass("prevent-scroll");			
+				}else{
+					$("#header-menu-js").addClass("menu-active");
+					$("body").addClass("prevent-scroll");
+					
+				}
+			}else{
+				$("#header-menu-js").removeClass("menu-active");
+				$(".header-button-menu i").removeClass("fa fa-times");
+				$(".header-button-menu i").toggleClass("fas fa-bars");
+				$("body").removeClass("prevent-scroll");
+				$(".page-overlay").removeClass("is-visible");
+			}
+		});
+		$(".header-button-search").click(function(){
+			if($(".header-button-search i").hasClass("fas fa-search")){
+				$(".header-button-search i").removeClass("fas fa-search");
+				$(".header-button-search i").toggleClass("fa fa-times");
+				$(".search-form").toggleClass("is-visible");
+				$(".page-overlay").toggleClass("is-visible");
+				
+				if($(".header-button-menu i").hasClass("fa fa-times")){
+					$("#header-menu-js").removeClass("menu-active");
+					$(".header-button-menu i").removeClass("fa fa-times");
+					$(".header-button-menu i").toggleClass("fas fa-bars");
+					$(".page-overlay").toggleClass("is-visible");
+					$("body").addClass("prevent-scroll");			
+				}else{
+					$("body").addClass("prevent-scroll");
+				}
+			}else{
+				$(".header-button-search i").toggleClass("fas fa-search");
+				$(".header-button-search i").removeClass("fa fa-times");
+				$(".search-form").removeClass("is-visible");
+				$(".page-overlay").removeClass("is-visible");
+				$("body").removeClass("prevent-scroll");
+			}
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$(".footer-menu__title").click(function(){
+			if($(this).hasClass("footer-menu__title--is-visible")){
+				$(this).removeClass("footer-menu__title--is-visible");
+				$(this).next().slideUp(500);
+			}else{
+				$(this).addClass("footer-menu__title--is-visible");
+				$(".footer-menu__list").slideUp(100);
+				$(this).next().slideDown(500);
+			}
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$(".cookie-banner_btn").click(function(){
+			$(".cookie-banner").css("display","none")
+		});
+	})
+</script>
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body class="blog">
+<!--HEADER-->
+<header id="header" class="header">
+    <div class="header-grid">
+		<!--LOGO-->
+		<a class="logo-trangchu" href="index.html" rel="home" title="Inchoo"></a>
+		<!--MENU-->
+        <nav class="menu" id="header-menu-js">
+            <ul id="menu-header-list" class="menu-list">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item" id="menu-item-active"><a href="blog.html">Blog</a></li>
+                <li class="menu-item"><a href="index.html">Porfolio</a></li>
+                <li class="menu-item"><a href="index.html">Services</a></li>
+                <li class="menu-item" ><a href="index.html">About</a></li>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
+			</ul>     
+		</nav>
+		<!--BUTTON SEARCH-->
+		<button type="button" class="header-button-search header-button">
+			<i class="fas fa-search"></i>
+			<span> Search</span>
+		</button>
+		<!--BUTTON HIRE US-->
+		<button type="button" class="header-button-hire-us header-button">
+			<i class="far fa-envelope"></i>
+			<span> Hire Us</span>
+		</button>
+		<!--BUTTON MENU-->
+		<button type="button" class="header-button-menu header-button">
+			<i class="fas fa-bars"></i></i>
+			<span> Menu</span>
+	</button>
+    </div>
+</header>
+<!--BLOG MENU-->
+<nav class="blog-menu">
+    <ul id="menu-blog-menu" class="blog-menu-list">
+        <li class="blog-menu-item blog-menu-active">
+            <a href="blog.html">All</a>
+        </li>				
+        <li class="blog-menu-item">
+            <a href="#">Magento</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">Magento2</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">UX/UI Design</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">eCommerce Talk</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">Online Marketing</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">Dev Talk</a>
+        </li>
+        <li class="blog-menu-item">
+            <a href="#">Life at Inchoo</a>
+        </li>
+    </ul>
+</nav>
+<!--MAIN-->
+<main class="main">
+    <form action="#" class="search-form">
+		<input type="search" class="input-text search-form-input" placeholder="Search here...">
+    </form>
+    <div class="content articles-list">
+        <div class="main-content">
+            <h1 class="category-title">Blog</h1>
+            <article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="marketing-online/google-concealing-search-terms.html">Google is concealing your search terms, and it is bad</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Oct 07, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/google_concealing-inchoo-615x243.jpg" title="Google is concealing your search terms, and it is bad">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>Let’s first read the following premise: For successful optimization and revenue-generating Google Ads campaigns,
+                         you need access to ALL search terms for which users clicked on your ads.</p>
+                    <p>It’s simple logic. You want to know what users searched for when they clicked on your ads, and then converted. Am I right?</p>
+                    <p>Not if you ask Google about it. Read on and find out why Google is behaving f…[CENSORED] bad with this one.</p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+            <article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Moving the Add to Cart validation error message on product page</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Danijel Vrgoc</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Sep 15, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Frontend</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/Moving-the-Add-to-Cart-button-and-error-validation-message-615x243.jpg" title="Moving the Add to Cart validation error message on product page">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>One quite often overlooked, but very important issue might happen because of design changes in the Add to Cart section on the Product Detail Page (PDP) in Magento 2.</p>
+                    <p>This section is very likely to vary from project to project, but regardless of the scope of work and the volume of these changes, error validation on the Quantity field must not cause any issues whatsoever.</p>
+                    <p>In this article, I will show you what needs to be done in such a case, which should be very easy and straightforward to implement in your custom theme.</p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+            <article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">5 UX improvements for Magento checkout page design</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Marko Brisevac</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Sep 08, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">UX/UI Design</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/checkout-615x243.jpg" title="5 UX improvements for Magento checkout page design">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>Magento 2 checkout page is the crucial page of your Magento 2 store. It is the final stage of the checkout flow and only motivated users interested in purchasing your products will reach this step.</p>
+                    <p>Many still remember the complicated 6-step Magento 1 checkout. Compared to that, checkout in Magento 2 has been significantly improved. Yet, there are some usability problems that we encountered during our analyzes, and there’s always room for improvement.</p>
+                    <p>In this blog post, we’ll <strong>suggest design improvements for 5 known usability issues on the checkout page</strong> in Magento 2</p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+            <article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">How does Google calculate the monthly budget of your campaigns?</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Sep 02, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/google-monthly-budget_inchoo-615x243.jpg" title="How does Google calculate the monthly budget of your campaigns?">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>In Google Ads campaigns we can set only daily budgets. Not monthly budgets. But the monthly budget is dependent on the daily budget in more ways than one.</p>
+                    <p>There are situations in which Google can spend over double your daily budget. Not only that, but it can also be spent several times over. In that case, don’t be scared if you see the “<a href="#">monthly charging limit reached</a>” message.</p>
+                    <p>Here we’ll describe <strong>how Google calculates your monthly budget</strong>. This is essential to understand <strong>if you have some overspent budget on your campaigns.</strong></p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+            <article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Schema Markup for eCommerce Websites</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Andreja Cicak</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Sep 01, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">eCommerce Talk</a>
+                            </li>
+                            <li>
+                                <a href="#" rel="tag">Magento</a>
+                            </li>
+                            <li>
+                                <a href="#" rel="tag">Magento 2</a>
+                            </li>
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/schema-markup-ecommerce_inchoo-615x243.jpg" title="Schema Markup for eCommerce Websites">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>Each time someone searches a particular product online, they end up on a SERP that (in most cases) includes a gazillion results.</p>
+                    <p>Since the chances of browsing through all of these links are little to none, it’s essential to make your business stand out.</p>
+                    <p>The best way to do it is to add structured data makeup throughtout your online store.</p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+			</article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Not in Buy Box – Status Meaning</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Aug 31, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/not-in-buybox_inchoo-615x243.jpg" title="">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>What happens when you decide to check your advertising campaigns on Amazon, finding a message for one your products saying "Not in Buy Box".</p>
+                    <p>Do you need to worry when you see that there are no impressions for that product?</p>
+                    <p>The answer is straightforward.</p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Impressions in Amazon Advertising Are Not All The Same – Meet The Differences</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Tea Pisac Benes</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Aug 28, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/amazon-sponsored-products_inchoo-615x243.jpg" title="">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>To do meaningful Amazon PPC optimization, we have to have the necessary data to analyze and improve.</p>
+                    <p>This post is going to be about <strong>Impressions metrics on Amazon Sponsored Product ads.</strong></p>
+                    <p>Long story short: The impressions metrics you found <strong>are</strong> different. The data you are looking at is correct.</p>
+                    <p>In case you want to understand what’s the difference, continue reading. </p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Getting started with eCommerce personalization</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Zoran Vorkapic</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Aug 27, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">eCommerce Talk</a>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/ecommerce-personalization_inchoo-615x243.jpg" title="Getting started with eCommerce personalization">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>At the most basic level, personalization is a way of delivering specific content to different customer groups to increase conversion rate and revenue and enhance user experience. When done right, personalization can improve user experience by <strong>providing the right content at the right time.</strong></p>
+                    <p>That user-related benefit can easily translate to <strong>company benefits</strong> such as growth in conversions, revenue, customer engagement, and loyalty.</p>
+                    <p>Keep in mind: <strong>personalization is not to be confused with customization.</strong> The main difference between the two is that <strong>personalization doesn’t require user’s</strong> active engagement. You personalize the experience for them. On the other hand, customization requires <strong>user’s active involvement.</strong></p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">How to Check Buy Box Eligibility on Amazon?</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Aug 19, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/buy-box_inchoo-615x243.jpg" title="How to Check Buy Box Eligibility on Amazon?">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>You probably understand the importance of the <strong>Buy Box</strong> on the Amazon product page and its impact on sales.</p>
+                    <p>Here’s a fact that might surprise you – <strong>almost 90% of all sales on Amazon go through the Buy Box.</strong></p>
+                    <p>This is not a blog post about how to get Buy Box on your product landing pages or what metrics can influence eligibility.</p>
+                    <p>This is a blog post about <strong>how to check Buy Box eligibility for single products.</strong></p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Monthly Charging Limit Reached in Google Ads?</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Davorin Cernoga</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Aug 14, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Online Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/monthly-charge-Gads_inchoo-615x243.jpg" title="Monthly Charging Limit Reached in Google Ads?">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>What happens when you suddenly see a message in your Google Ads account that says “Your monthly charging limit is reached”?</p>
+                    <p>You might think at first that your monthly budget is depleted. But then you realise: there is no monthly budget. Google Ads campaigns work <strong>on a daily budget.</strong></p>
+                    <p><strong>You can’t set a monthly budget</strong> on your Google Ads campaigns.</p>
+                    <p>You again read the full message. This time you might notice the word “charging”. Now, this could be <strong>the sign of a big problem</strong> when it comes to charging your <strong>credit card.</strong></p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">What’s New in Magento 2.4? Features and Benefits for Merchants Explained</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Antonio Gotovac</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Aug 06, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">eCommerce Talk</a>
+                                <a href="#" rel="tag">Magento 2</a>
+                                <a href="#" rel="tag">Upgrading Magento 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/Magento-2.4.jpg" title="What’s New in Magento 2.4? Features and Benefits for Merchants Explained">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>Released on 28 July 2020, the new Magento 2.4 comes with a long list of new features, bug fixes and security enhancements to the world’s no.1 e-Commerce platform.</p>
+                    <p><strong>What is new in Magento 2.4?</strong></p>
+                    <ul>
+						<li>New and improved default search engine</li>
+						<li>Improved Media Gallery</li>
+						<li>New feature Seller-Assisted Shopping</li>
+						<li>New feature Purchase Approval Workflows (only for Magento Commerce)</li>
+						<li>Two-factor authentication for improved security</li>
+						<li>Higher technical requirements overall</li>
+					</ul>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Best practices for Magento cart page design</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Zoran Vorkapic</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Jul 27, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">UX/UI Design</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/magent-cart-page_inchoo.jpg" title="Best practices for Magento cart page design">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>The shopping cart sits near the end of the shopping flow – just a step before the actual checkout and payment process. It’s the place where totals, discounts, taxes, and shipping costs get calculated. Most importantly, it is a magical place where the <strong>final purchase decision</strong> often happens.</p>
+                    <p>Besides providing an order overview, the cart page is also an ideal place to show some vital purchase information that can weigh in the purchase decision. It can also offer products for impulse shopping to increase the average cart value.</p>
+                    <p>However, we often see shopping cart pages having <strong>high abandonment rates.</strong> There are many disapointments customers can face on the cart page and leave the store befor completing the purchase. Here are some tips for Magento cart page design to lower those abandonment rates and push your customers to the checkout!</p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Magento 2 Webhooks Notifications</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Deni Pesic</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Jun 29, 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">Adminstration</a>
+                                <a href="#" rel="tag">Configuration</a>
+                                <a href="#" rel="tag">Extensions</a>
+                                <a href="#" rel="tag">Magento 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/webhooks.jpg" title="Magento 2 Webhooks Notifications">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>Webhooks are used to indicate when an important envets had occurred, usually by sending a notification in the form of message to a specified weebhook URL or endpoint. This can be really useful for centain events, like when a customer make an order or leaves a comment.</p>
+                    <p>It can also be a really handy way for developers to get instanly notified when an exception occurs, providing then with the information they need to quickly locate and fix the issue.</p>
+                    <p>In this article, I will show you how to create a module that allows you to configure you very own webhooks for Magento 2, utilizing the Incoming Webhooks feature from Slack.</p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+            </article>
+			<article class="c-article">
+                <header class="c-article__header">
+                    <h2 class="c-article__title">
+                        <a href="#">Is now the time to invest in PWA for your Magento website? Top questions for merchants answered.</a>
+                    </h2>
+                    <div class="c-article__meta">
+                        <span class="c-article__meta-author">
+                            By: 
+                            <a href="#">Aron Stanic</a>
+                            ,
+                        </span>
+                        <span class="c-article__meta-date">
+                            Jun 19 , 2020</span>
+                        <ul class="post-categories">
+                            <li>
+                                <a href="#" rel="tag">eCommerce Talk</a>
+                                <a href="#" rel="tag">Magento 2</a>
+                                <a href="#" rel="tag">PWA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="c-article__image">
+                    <a href="#">
+                        <img src="images/consider-pwa-inchoo.png" title="Is now the time to invest in PWA for your Magento website? Top questions for merchants answered.">
+                    </a>
+                </div>
+                <div class="c-article__content">
+                    <p>Progressive Web Application (PWAs) are the <strong>next big thing eCommerce.</strong> This topic has been on everyone's lip and under everyone's fingertips from the initial conversations around Magento 2 frontend and the introduction of the headless concept.</p>
+                    <p>If you are merchant considering this new frontend concept, you may be wondering what the fuss is all about, whether it makes sense to invest in PWAs,  and how big of an investment should you plan> Here is a quick rundown of the <strong>main questions and answers for anyone still on the fence about PWAs in Magento</strong>, from a merchant's perspective.</p>
+                    <p></p>
+                    <a href="#" class="btn btn-green">Read more</a>
+                </div>
+			</article>
+			<ul class="o-pagination">
+				<li class="o-pagination__list-item">
+					<span class="page-numbers current">1</span>
+				</li>
+				<li class="o-pagination__list-item">
+					<a href="#" class="page-numbers">2</a>
+				</li>
+				<li class="o-pagination__list-item">
+					<a href="" class="page-numbers">3</a>
+				</li>
+				<li class="o-pagination__list-item">
+					<span class="page-numbers dots">...</span>
+				</li>
+				<li class="o-pagination__list-item">
+					<a href="#" class="page-numbers">70</a>
+				</li>
+				<li class="o-pagination__list-item">
+					<a href="#" class="next page-numbers">Older</a>
+				</li>
+			</ul>
+        </div>
+        <div class="primary-slidebar">
+            <a href="#" class="widget o-services-banner o-services-banner--google-shopping" title="Learn More">
+                <span class="o-services-banner__title h2">
+                    We can 
+                    <strong>make </strong>
+                    your 
+                    <strong>Google Shopping </strong>
+                    perform 
+                    <strong>better</strong>!
+                </span>
+                <img class="o-services-banner__image" src="images/ilustracije-google_shopping.svg">
+                <span class="o-services-banner__view-more h4">
+                    View more 
+                    <strong>details </strong>
+                    <span class="fa fa-angle-right">
+                    </span>
+                </span>
+            </a>
+            <a href="#" class="widget o-hire-us-banner">
+                <img class="o-hire-us-banner__mobile" src="images/hire_us_mobile.svg">
+                <img class="o-hire-us-banner__destop" src="images/hire_us_desktop.svg">
+                <div class="o-hire-us-banner__content">
+                    <span class="o-hire-us-banner__title h2 widget-title">
+                        Interested in hiring us?
+                    </span>
+                    <span class="o-hire-us-banner__button btn btn-green" title="Send a request">Send a request</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+<!--FOOTER-->
+<footer class="footer">
+	<div class="footer-menu__container">
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Blog categories</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">All</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Magento</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento2</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">UX/UI Design</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce Talk</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Online Marketing</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Dev Talk</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Life at Inchoo</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Audits</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">SEO Audit</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Technical Audit</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce UX Audit</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">PPC Audit Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Google Analytics Audit</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Magento</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">About Magento</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Magento Website Development Process</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento Development Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento 2 Development</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Custom Magento Development</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento 2 Migration Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento Design</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Marketing</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce PPC Management</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Google Shopping Management</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Google Tag Manager</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Featured Services</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">Fastly</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Pimcore</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">ShpperHQ</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Klevu</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+	</div>
+	<!--hr-->
+	<div class="footer-hr__container">
+		<hr>
+	</div>
+	<div class="footer-menu__container footer-menu-container-hafl">
+		<div class="footer-menu">
+			<div class="footer-service-dev">
+				<img src="images/professional_solutions_partner_v.svg" width="86px" height="87px">
+				<img src="images/badge-magento-2-solution-specialist.png" width="56px" height="100px">
+				<img src="images/badge-magento-2-professional-developer.png" width="56px" height="100px">
+				<img src="images/badge-magento-2-professional-frontend-developer.png" width="56px" height="100px">
+				<img src="images/google_premium_partner.png"  width="126px" height="63px">
+			</div>
+		</div>
+		<div class="footer-menu">
+			<div class="footer-menu-newsletter">
+				<div class="footer-newletter-title">Newsletter</div>
+				<p class="footer-newsletter-subtitle">
+					Sign up for our newsletter to get your dose of useful eCommerce, Magento and Inchoo news and events.
+				</p>
+				<a class="button-newletter btn-green btn" hre="#" title="Subscribe to our newsletter">Subscribe to our newsletter</a>
+			</div>
+		</div>
+	</div>
+	<!--hr-->
+	<div class="footer-hr__container">
+		<hr>
+	</div>
+	<!--Footer social list-->
+	<ul class="footer-social-list">
+		<li><a href="#" title="Find us on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+		<li><a href="#" title="Find us on Twitter"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="#" title="Find us on LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+		<li><a href="#" title="Find us on Instagram"><i class="fab fa-instagram"></i></a></li>
+	</ul>
+	<!--Footer contact-->
+	<div class="footer-contact">
+		<a href="#"><i class="far fa-envelope"></i>
+			web@inchoo.net
+		</a>
+		<a href="#"><i class="fas fa-phone-alt"></i>
+			CRO: +385 31 200 729
+		</a>
+		<a href="#"><i class="fas fa-phone-alt"></i>
+			US: +1 815 671 4208
+		</a>
+	</div>
+	<!--Footer back to top-->
+	<a href="#header" class="footer-back-to-top" title="Back to top">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+	<!--Footer copyright-->
+	<div class="footer-copyright">		
+		2020 © Inchoo. All rights reserved. 
+		<a href="#" title="Privacy & Data Protection Policy">Privacy & Data Protection Policy</a>
+	</div>
+</footer>
+<div class="page-overlay"></div>
+<div id="outdated"></div>
+<div class="cookie-banner" style="opacity: 1;">
+	<span class="cookie-banner-message">
+		We use cookies on our website to support technical features that enhance your user experience. We also use analytics. To opt-out from analytics, 
+		<a href="#" title="Click for more information" title="click for more information">click for more information</a>
+		.
+    
+	</span>
+	<div class="cookie-banner-btn-cont">
+		<button type="button" class="btn-green cookie-banner_btn" title="I've read it">I've read it</button>
+	</div>
+</div>
+</body>
+</html>
