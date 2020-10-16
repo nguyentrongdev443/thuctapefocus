@@ -1902,23 +1902,33 @@ code{
 	.comment-respond input[type="submit"]{
 		width: auto;
 	}
-	.page-contact .main{
+	.page-contact .main,.page-hire-us .main{
 		padding: 24px 0;
 		background: url(../images/location_map.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-	.page-contact .content{
+	.page-contact .content,.page-hire-us .content{
 		padding-left: 24px;
 		padding-right: 24px;
 	}
-	.page-contact .contact-form__container{
+	.page-contact .contact-form__container,.page-hire-us .contact-form__container{
 		background-color: #fff;
 		border-radius: 3px;
 		padding: 0 24px 24px;
 		display: grid;
 		grid-column-gap: 24px;
 		grid-template-columns: repeat(8, 1fr);
+	}
+	.page-contact .o-page-title,.page-hire-us .o-page-title{
+		grid-column: span 8;
+	}
+	.o-page-title{
+		display: grid;
+		grid-column-gap: 24px;
+		grid-template-columns: repeat(8, 1fr);
+		margin-top: 24px;
+		margin-bottom: 24px;
 	}
 	.o-page-title h1{
 		grid-column: span 8;
@@ -1928,13 +1938,13 @@ code{
 	.o-page-title p{
 		grid-column: 2 / 8;
 	}
-	.page-contact .contact-us__container{
+	.page-contact .contact-us__container,.page-hire-us .contact-us__container{
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		grid-column: span 8;
 		grid-column-gap: 24px;
 	}
-	.page-contact .c-contact-form{
+	.page-contact .c-contact-form,.page-hire-us .c-contact-form{
 		margin-bottom: 0;
 		grid-column: 1 / 5;
 		display: block;
@@ -2361,18 +2371,18 @@ code{
 	.content-single-article .comment-respond{
 		grid-column: 3 / 11;
 	}
-	.page-contact .main{
+	.page-contact .main,.page-hire-us .main{
 		padding: 30px 0;
 	}
-	.page-contact .content{
+	.page-contact .content,.page-hire-us .content{
 		max-width: 1224px;
 	}
-	.page-contact .contact-form__container{
+	.page-contact .contact-form__container,.page-hire-us .contact-form__container{
 		padding: 0 0 24px;
 		grid-column-gap: 48px;
     	grid-template-columns: repeat(12, 1fr);
 	}
-	.page-contact .o-page-title{
+	.page-contact .o-page-title,.page-hire-us .o-page-title{
 		grid-column: span 12;
 		padding-top: 36px;
 		padding-bottom: 36px;
@@ -2389,11 +2399,11 @@ code{
 	.o-page-title p{
 		grid-column: 2 / 12;
 	}
-	.page-contact .contact-us__container{
+	.page-contact .contact-us__container, .page-hire-us .contact-us__container{
 		grid-template-columns: repeat(10, 1fr);
 		grid-column: 2 / 12;
 	}
-	.page-contact .c-contact-form{
+	.page-contact .c-contact-form, .page-hire-us .c-contact-form{
 		grid-column: 1 / 7;
 	}
 	.c-contact-form{
