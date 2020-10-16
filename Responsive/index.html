@@ -66,12 +66,14 @@
 	$(document).ready(function(){
 		$(".footer-menu__title").click(function(){
 			if($(this).hasClass("footer-menu__title--is-visible")){
-				$(this).removeClass("footer-menu__title--is-visible");
-				$(this).next().slideUp(500);
+                $(this).removeClass("footer-menu__title--is-visible");
+                $(".footer-menu__title").removeClass("footer-menu__title--is-visible");
+				$(this).next().hide();
 			}else{
+                $(".footer-menu__title").removeClass("footer-menu__title--is-visible");
 				$(this).addClass("footer-menu__title--is-visible");
-				$(".footer-menu__list").slideUp(100);
-				$(this).next().slideDown(500);
+				$(".footer-menu__list").hide(50);
+				$(this).next().show(100);
 			}
 		});
 	});
@@ -98,7 +100,7 @@
                 <li class="menu-item"><a href="blog.html">Blog</a></li>
                 <li class="menu-item"><a href="#">Porfolio</a></li>
                 <li class="menu-item"><a href="#">Services</a></li>
-                <li class="menu-item" ><a href="#">About</a></li>
+                <li class="menu-item"><a href="about.html">About</a></li>
                 <li class="menu-item"><a href="contact.html">Contact</a></li>
 			</ul>     
 		</nav>
@@ -645,7 +647,7 @@
 		<!--Client say-->
 		<div class="clients-say page-section">
 			<div class="clients-say-title">
-				<h3 class="title-clients-say">What our clients say about us</h3>
+				<h3 class="o-page-section-title">What our clients say about us</h3>
 			</div>
 			<div class="clients-say-container">
 				<div class="text-content slick-list">
@@ -695,7 +697,7 @@
 		<div class="lastest-posts">
 			<div class="lastest-posts-container">
 				<div class="lastest-posts-title">
-					<div class="o-lastest-posts-title page-section-title">Blog and Highlights</div>
+					<div class="o-lastest-posts-title o-page-section-title">Blog and Highlights</div>
 					<p class="o-lastest-posts-subtitle">Every month over 200,000 people searching for Magento solutions 
 						<a href="#">read our blog</a>.
 					</p>
@@ -915,7 +917,7 @@
 	<div class="hire-us-cont">
 		<div class="hire-us-title h2">Tell us about your project</div>
 		<p class="hire-us-subtitle">Drop us a line. We'd love to know more about your project.</p>
-		<button type="button" class="btn-gray">
+		<button type="button" class="btn-gray" onclick="location.href='hire-us.html'">
 			<i class="far fa-envelope"></i>
 			<span> Hire Us</span>
 		</button>

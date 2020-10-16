@@ -66,12 +66,14 @@
 	$(document).ready(function(){
 		$(".footer-menu__title").click(function(){
 			if($(this).hasClass("footer-menu__title--is-visible")){
-				$(this).removeClass("footer-menu__title--is-visible");
-				$(this).next().slideUp(500);
+                $(this).removeClass("footer-menu__title--is-visible");
+                $(".footer-menu__title").removeClass("footer-menu__title--is-visible");
+				$(this).next().hide();
 			}else{
+                $(".footer-menu__title").removeClass("footer-menu__title--is-visible");
 				$(this).addClass("footer-menu__title--is-visible");
-				$(".footer-menu__list").slideUp(100);
-				$(this).next().slideDown(500);
+				$(".footer-menu__list").hide(50);
+				$(this).next().show(100);
 			}
 		});
 	});
