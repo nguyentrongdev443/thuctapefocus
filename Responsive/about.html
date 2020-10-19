@@ -87,14 +87,47 @@
 </script>
 <script>
     $(document).ready(function(){
+        var item = "all";
+        $(".about-us__team-member").css("display","flex");
         $(".about-us__work-title").click(function(){
-            var item = $(".about-us__work-title--active span").attr("data-group-item");
             //var group = $(".about-us__team-member").attr("data-display-group");
             $(".about-us__work-title").removeClass("about-us__work-title--active");
             $(this).addClass("about-us__work-title--active");
-            $(".about-us__team-member[data-display-group='$(item)']").css("style","flex");
-            $(".about-us__team-member[data-display-group!='$(item)']").css("style","none");
-        })
+            item = $(".about-us__work-title--active span").attr("data-group-item");
+            switch(item){
+                case "all":
+                    $(".about-us__team-member").css("display","flex");
+                    break;
+                case "frontend":
+                    $(".about-us__team-member").css("display","none");
+                    $("[data-display-group~='frontend']").css("display","flex");
+                    break;
+                case "backend":
+                    $(".about-us__team-member").css("display","none");
+                    $("[data-display-group~='backend']").css("display","flex");
+                    break;
+                case "design":
+                    $(".about-us__team-member").css("display","none");
+                    $("[data-display-group~='design']").css("display","flex");
+                    break;
+                case "icg":
+                    $(".about-us__team-member").css("display","none");
+                    $("[data-display-group~='icg']").css("display","flex");
+                    break;
+                case "project manager":
+                    $(".about-us__team-member").css("display","none");
+                    $("[data-display-group~='manager']").css("display","flex");
+                    break;
+                case "support":
+                    $(".about-us__team-member").css("display","none");
+                    $("[data-display-group~='support']").css("display","flex");
+                    break;
+                case "magento":
+                    $(".about-us__team-member").css("display","none");
+                    $("[data-display-group~='magento']").css("display","flex");
+                    break;
+            }
+        });
     });
 </script>
 <link rel="shortcut icon" href="images/favicon.ico">
