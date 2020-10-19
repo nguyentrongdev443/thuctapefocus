@@ -85,6 +85,18 @@
 		});
 	})
 </script>
+<script>
+    $(document).ready(function(){
+        $(".about-us__work-title").click(function(){
+            var item = $(".about-us__work-title--active span").attr("data-group-item");
+            //var group = $(".about-us__team-member").attr("data-display-group");
+            $(".about-us__work-title").removeClass("about-us__work-title--active");
+            $(this).addClass("about-us__work-title--active");
+            $(".about-us__team-member[data-display-group='$(item)']").css("style","flex");
+            $(".about-us__team-member[data-display-group!='$(item)']").css("style","none");
+        })
+    });
+</script>
 <link rel="shortcut icon" href="images/favicon.ico">
 </head>
 <body>
@@ -207,28 +219,28 @@
         </div>
         <ul class="about-us__work-titles" id="display-group-tabs">
             <li class="about-us__work-title about-us__work-title--active">
-                <span>All teams</span>
+                <span data-group-item="all">All teams</span>
             </li>
             <li class="about-us__work-title">
-                <span>Frontend</span>
+                <span data-group-item="frontend">Frontend</span>
             </li>
             <li class="about-us__work-title">
-                <span>Backend</span>
+                <span data-group-item="backend">Backend</span>
             </li>
             <li class="about-us__work-title">
-                <span>Design</span>
+                <span data-group-item="design">Design</span>
             </li>
             <li class="about-us__work-title">
-                <span>Digital Marketing</span>
+                <span data-group-item="icg">Digital Marketing</span>
             </li>
             <li class="about-us__work-title">
-                <span>Project Management</span>
+                <span data-group-item="project manager">Project Management</span>
             </li>
             <li class="about-us__work-title">
-                <span>Bussiness Support</span>
+                <span data-group-item="support">Bussiness Support</span>
             </li>
             <li class="about-us__work-title">
-                <span>Magento Certified</span>
+                <span data-group-item="magento">Magento Certified</span>
             </li>
         </ul>
         <ul class="about-us__team-members" id="display-group">
