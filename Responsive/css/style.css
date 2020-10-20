@@ -440,6 +440,9 @@ featured-work-tabs{
     text-align: right;
 }
 
+.carousel-control,.carousel-control:hover{
+	color: #272727;
+}
 
 .search-form.is-visible {
     opacity: 1;
@@ -2223,6 +2226,12 @@ code{
 		font-size: 26px;
 		line-height: 36px;
 	}
+	.carousel-control.right{
+		right: -50px;
+	}
+	.carousel-control.left{
+		left: -30px;
+	}
 	.o-stats--title{
 		font-size: 16px;
 		line-height: 24px;
@@ -3029,6 +3038,12 @@ code{
 		text-align: right;
 		align-self: flex-end;
 		font-size: 14px;
+	}
+	.carousel-control.right{
+		right: -100px;
+	}
+	.carousel-control.left{
+		left: -50px;
 	}
 	.reasons{
 		margin-bottom: 48px;
