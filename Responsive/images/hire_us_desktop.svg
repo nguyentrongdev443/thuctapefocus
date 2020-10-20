@@ -1,0 +1,379 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 490.03">
+  <defs>
+    <style>
+        .cls-1 {
+        isolation: isolate;
+        }
+
+        .cls-2 {
+        fill: #f2f2f2;
+        }
+
+        .cls-12, .cls-3 {
+        fill: #e6e6e6;
+        }
+
+        .cls-13, .cls-4 {
+        fill: #ccc;
+        }
+
+        .cls-5 {
+        fill: #4d4d4d;
+        }
+
+        .cls-22, .cls-6 {
+        fill: #999;
+        }
+
+        .cls-7 {
+        fill: #c2c2c2;
+        }
+
+        .cls-27, .cls-7 {
+        opacity: 0.5;
+        }
+
+        .cls-8 {
+        fill: #8a8a8a;
+        }
+
+        .cls-9 {
+        fill: gray;
+        }
+
+        .cls-10 {
+        fill: #b3b3b3;
+        }
+
+        .cls-11, .cls-28 {
+        fill: #666;
+        }
+
+        .cls-12 {
+        opacity: 0.6;
+        }
+
+        .cls-13, .cls-18 {
+        opacity: 0.7;
+        }
+
+        .cls-13, .cls-18, .cls-22, .cls-28 {
+        mix-blend-mode: multiply;
+        }
+
+        .cls-14, .cls-24, .cls-27 {
+        fill: #fff;
+        }
+
+        .cls-14 {
+        stroke: #ccc;
+        stroke-width: 1.29px;
+        }
+
+        .cls-14, .cls-17 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        }
+
+        .cls-15 {
+        fill: #f5e0cd;
+        }
+
+        .cls-16 {
+        fill: #e3cbb1;
+        }
+
+        .cls-17 {
+        fill: none;
+        stroke: #8c6239;
+        stroke-width: 2.33px;
+        }
+
+        .cls-19 {
+        fill: #8c6239;
+        }
+
+        .cls-20 {
+        fill: #c69c6d;
+        }
+
+        .cls-21 {
+        fill: #a67c52;
+        }
+
+        .cls-22, .cls-24, .cls-28 {
+        opacity: 0.3;
+        }
+
+        .cls-23 {
+        fill: #79ad36;
+        }
+
+        .cls-25 {
+        fill: #ed1e79;
+        }
+
+        .cls-26 {
+        fill: #c41964;
+        }
+
+        .cls-29 {
+        fill: #f9f2b7;
+        }
+
+      @-moz-keyframes fade {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        30% { opacity: 1; }
+        31% { opacity: 0; }
+        41% { opacity: 0; }
+        42 { opacity: 1; }
+        62% { opacity: 1; }
+        63% { opacity: 0; }
+        73% { opacity: 0; }
+        74% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+
+      @-webkit-keyframes fade {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        30% { opacity: 1; }
+        31% { opacity: 0; }
+        41% { opacity: 0; }
+        42 { opacity: 1; }
+        62% { opacity: 1; }
+        63% { opacity: 0; }
+        73% { opacity: 0; }
+        74% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+
+      @-o-keyframes fade{
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        30% { opacity: 1; }
+        31% { opacity: 0; }
+        41% { opacity: 0; }
+        42 { opacity: 1; }
+        62% { opacity: 1; }
+        63% { opacity: 0; }
+        73% { opacity: 0; }
+        74% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes fade {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        30% { opacity: 1; }
+        31% { opacity: 0; }
+        41% { opacity: 0; }
+        42 { opacity: 1; }
+        62% { opacity: 1; }
+        63% { opacity: 0; }
+        73% { opacity: 0; }
+        74% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+
+      .fade-in {
+        opacity: 0;
+        -webkit-animation: fade ease-out;
+        -moz-animation: fade ease-out;
+        animation: fade ease-out;
+
+        /* makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-duration: 6s;
+        -moz-animation-duration: 6s;
+        animation-duration: 6s;
+
+        -webkit-animation-iteration-count: 1;
+        -moz-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+
+      }
+
+        .fade-in.pink {
+        -webkit-animation-delay: .5s;
+        -moz-animation-delay: .5s;
+        animation-delay: .5s;
+        }
+
+        .fade-in.dot.one {
+        -webkit-animation-delay: .5s;
+        -moz-animation-delay: .5s;
+        animation-delay: .5s;
+        }
+
+        .fade-in.dot.two {
+        -webkit-animation-delay: .75s;
+        -moz-animation-delay: .75s;
+        animation-delay: .75s;
+        }
+
+        .fade-in.dot.three {
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        animation-delay: 1s;
+        }
+
+        .fade-in.gray {
+        -webkit-animation-delay: 1.5s;
+        -moz-animation-delay: 1.5s;
+        animation-delay: 1.5s;
+        }
+
+        .fade-in.dot.five {
+        -webkit-animation-delay: 1.75s;
+        -moz-animation-delay: 1.75s;
+        animation-delay: 1.75s;
+        }
+        .fade-in.dot.six {
+        -webkit-animation-delay: 2s;
+        -moz-animation-delay: 2s;
+        animation-delay: 2s;
+        }
+        .fade-in.dot.seven {
+        -webkit-animation-delay: 2.25s;
+        -moz-animation-delay: 2.25s;
+        animation-delay: 2.25s;
+        }
+
+      @-moz-document url-prefix() {
+        .fade-in {
+           opacity: 1;
+        }
+      }
+    </style>
+  </defs>
+  <title>HIre_us_nekompresirana</title>
+  <g class="cls-1">
+    <g id="Layer_1" data-name="Layer 1">
+      <g id="bg-desktop">
+        <rect class="cls-2" width="336" height="490.03"/>
+        <polygon class="cls-3" points="336 490.03 0 490.03 336 0 336 490.03"/>
+      </g>
+      <g id="lik">
+        <ellipse class="cls-4" cx="172.35" cy="416.65" rx="131.61" ry="34.81"/>
+        <g>
+          <rect class="cls-5" x="78.25" y="373.94" width="58.04" height="8.38" transform="translate(485.41 270.86) rotate(90)"/>
+          <rect class="cls-5" x="200.88" y="373.94" width="58.04" height="8.38" transform="translate(608.04 148.24) rotate(90)"/>
+        </g>
+        <g>
+          <rect class="cls-5" x="161.64" y="378.7" width="6.94" height="10.14" rx="3.47" ry="3.47" transform="translate(330.23 767.55) rotate(180)"/>
+          <rect class="cls-5" x="135.27" y="381.12" width="6.94" height="10.14" rx="3.47" ry="3.47" transform="translate(277.49 772.38) rotate(180)"/>
+          <rect class="cls-5" x="188.96" y="381.12" width="6.94" height="10.14" rx="3.47" ry="3.47" transform="translate(384.86 772.38) rotate(180)"/>
+          <rect class="cls-6" x="161.83" y="366.48" width="6.56" height="19.94" rx="2.06" ry="2.06"/>
+          <g>
+            <rect class="cls-6" x="115.25" y="264.35" width="99.57" height="91.79" rx="16.67" ry="16.67" transform="translate(330.08 620.49) rotate(180)"/>
+            <rect class="cls-7" x="131.18" y="271.23" width="67.71" height="62.42" rx="11.34" ry="11.34" transform="translate(330.08 604.87) rotate(180)"/>
+            <rect class="cls-8" x="131.18" y="273.02" width="67.71" height="62.42" rx="11.34" ry="11.34" transform="translate(330.08 608.47) rotate(180)"/>
+            <path class="cls-8" d="M131.92,348h66.23a16.72,16.72,0,0,0,16.67-16.67v8.19a16.72,16.72,0,0,1-16.67,16.67H131.92a16.72,16.72,0,0,1-16.67-16.67v-8.19A16.72,16.72,0,0,0,131.92,348Z"/>
+          </g>
+          <rect class="cls-9" x="160.5" y="294.23" width="9.07" height="83.66" rx="4.54" ry="4.54" transform="translate(330.08 672.12) rotate(180)"/>
+          <rect class="cls-9" x="174.42" y="361.18" width="6.56" height="35.03" rx="2.73" ry="2.73" transform="translate(-238.54 420.39) rotate(-70.58)"/>
+          <rect class="cls-9" x="149.44" y="361.18" width="6.56" height="35.03" rx="2.73" ry="2.73" transform="translate(-153.67 648.64) rotate(-109.42)"/>
+          <path class="cls-7" d="M160.5,294.23h9.07a0,0,0,0,1,0,0v58a3.9,3.9,0,0,1-3.9,3.9H164.4a3.9,3.9,0,0,1-3.9-3.9v-58a0,0,0,0,1,0,0Z" transform="translate(330.08 650.37) rotate(-180)"/>
+        </g>
+        <polygon class="cls-10" points="257.81 318.95 79.37 318.95 54.7 335.44 282.47 335.44 257.81 318.95"/>
+        <g>
+          <rect class="cls-11" x="57.4" y="379.68" width="71.44" height="10.32" transform="translate(477.96 291.71) rotate(90)"/>
+          <rect class="cls-11" x="208.33" y="379.68" width="71.44" height="10.32" transform="translate(628.89 140.79) rotate(90)"/>
+        </g>
+        <polygon class="cls-12" points="257.81 318.95 54.7 335.44 282.47 335.44 257.81 318.95"/>
+        <path class="cls-13" d="M217.76,295.23v-0.15c0-.21,0-0.41,0-0.61h0v-0.1q0.05-.65.07-1.29h0c0-.2,0-0.39,0-0.58s0-.11,0-0.16,0-.37,0-0.55v-0.15a12.43,12.43,0,0,0-.44-2.72l0-9c0-8.8-6.33-14.45-14.11-14.45h-8.76l0-.13a5.48,5.48,0,0,0-1-3,29.72,29.72,0,0,0,3-8.16,32.31,32.31,0,1,0-58.55,0,29.72,29.72,0,0,0,2.95,8,4.68,4.68,0,0,0-1,2.74S114,261,113.33,289.77c-0.43,4.25.25,35.71,0.25,35.71,0,8.75,10,14.75,17.78,14.75h71.73c7.75,0,14.09-7.15,14.11-15.9l0.1-23.49,0.08-.42,0.08-.44c0-.15,0-0.3.07-0.45l0-.33q0-.24.06-0.48l0-.28c0-.17,0-0.35.05-0.52v-0.1q0.05-.65.07-1.29h0c0-.19,0-0.38,0-0.57s0-.11,0-0.16S217.77,295.41,217.76,295.23Z"/>
+        <path class="cls-14" d="M205.32,334.18H136.43c-7.44,0-13.53-6.75-13.55-15l-0.13-39.83c0-8.3,6.08-13.63,13.55-13.63h69.15c7.47,0,13.56,5.33,13.55,13.63l-0.13,39.83C218.85,327.44,212.75,334.18,205.32,334.18Z"/>
+        <circle class="cls-15" cx="170.75" cy="238.77" r="31.02"/>
+        <path class="cls-16" d="M149.12,239.19A30.61,30.61,0,0,1,175,209a30.6,30.6,0,1,0,0,60.48A30.61,30.61,0,0,1,149.12,239.19Z"/>
+        <g>
+          <path class="cls-17" d="M151.63,233.42c0-1.88,2.18-3.4,4.87-3.4s4.87,1.52,4.87,3.4"/>
+          <path class="cls-17" d="M180.12,233.42c0-1.88,2.18-3.4,4.87-3.4s4.87,1.52,4.87,3.4"/>
+        </g>
+        <path class="cls-17" d="M165.4,250.77a22.76,22.76,0,0,0,10.69,0"/>
+        <g class="cls-18">
+          <path class="cls-3" d="M199.37,225.44c7.14,14.38-36.39-18.49-50.79-5.62-5.06-3.65-2.4-8.3,2.46-12.21,4-3.24,20.4-8.7,28.87-11-0.06,6.27.94,12.37,2.84,16.29,0.61-3.07,3.53-5.86,8-8.09C191.8,210.32,192.94,212.51,199.37,225.44Z"/>
+        </g>
+        <path class="cls-19" d="M199.68,224.58c3.53,7.61-36.58-17.75-51.1-4.76-5.11-3.68-2.39-9.34,2.52-13.28,4.06-3.27,19.73-8.55,28.27-10.83a37.61,37.61,0,0,0,3.72,16.2c0.61-3.1,3.56-5.91,8.1-8.16C192.23,209.27,193.56,211.36,199.68,224.58Z"/>
+        <g>
+          <path class="cls-20" d="M199.32,223.27c6.89,13.38-36.3-19.11-50.82-6.12-5.11-3.68-2.43-8.37,2.48-12.32,4.06-3.27,20.59-8.78,29.13-11.06-0.06,6.33.94,12.48,2.86,16.43,0.61-3.1,3.56-5.91,8.1-8.16C192.11,207.58,192.65,210.32,199.32,223.27Z"/>
+          <path class="cls-21" d="M158.2,204.84c3.1-2.49,13.42-6.28,21.94-9,0-.7,0-1.4,0-2.1-8.55,2.27-25.07,7.79-29.13,11.06-4.91,3.95-7.59,8.63-2.48,12.32a11.73,11.73,0,0,1,4.91-2.56C151.9,211.44,154.37,207.92,158.2,204.84Z"/>
+        </g>
+        <g>
+          <path class="cls-19" d="M146.33,215.66c6.21,3.27.3,7.72-6.08,15.43C135.38,232.66,139.24,211.92,146.33,215.66Z"/>
+          <path class="cls-20" d="M146.33,215.66c4.43,2.87,0,6.73-6.37,14.44C135.09,231.67,138.81,210.78,146.33,215.66Z"/>
+          <path class="cls-21" d="M147.38,216.65l0.22,0.15a4.68,4.68,0,0,0-1.27-1.14c-7.11-4.61-10.82,13.8-7.09,14.49C137.53,226.25,141.15,212.61,147.38,216.65Z"/>
+        </g>
+        <g>
+          <path class="cls-22" d="M221.69,308.43V260.81a5,5,0,0,0-5-5H120.45a5,5,0,0,0-5,5v47.62s1.54,24.48,3.41,24.48h99.37C220.15,332.91,221.69,308.43,221.69,308.43Z"/>
+          <g>
+            <path class="cls-4" d="M216.83,335h-96.5c-1.82,0-3.81-.58-4.44-1.31L104.31,320.2c-1-1.11.15-2.05,2.49-2.05H230.38c2.33,0,3.44.94,2.49,2.05l-11.59,13.52C220.65,334.45,218.66,335,216.83,335Z"/>
+            <path class="cls-11" d="M216.83,333.06h-96.5c-1.82,0-3.81-.58-4.44-1.31l-11.59-13.52c-1-1.11.15-2.05,2.49-2.05H230.38c2.33,0,3.44.94,2.49,2.05l-11.59,13.52C220.65,332.48,218.66,333.06,216.83,333.06Z"/>
+            <rect class="cls-23" x="117.02" y="260.2" width="103.13" height="72.11" rx="4.82" ry="4.82"/>
+            <path class="cls-24" d="M215.32,332.31H121.85a4.84,4.84,0,0,1-4.82-4.82l98.3-67.29a4.84,4.84,0,0,1,4.82,4.82v62.47A4.84,4.84,0,0,1,215.32,332.31Z"/>
+          </g>
+          <g>
+            <path class="cls-3" d="M164.85,291.35a1.5,1.5,0,0,0-1.5,1.5,1.52,1.52,0,0,0,1.5,1.52,1.54,1.54,0,0,0,1.52-1.52A1.52,1.52,0,0,0,164.85,291.35Z"/>
+            <path class="cls-3" d="M172.69,287.31H159.5v13.23a4.8,4.8,0,0,0,5,4.95h13.19V292.25A4.86,4.86,0,0,0,172.69,287.31Zm2.88,12.86L168.9,295a1.28,1.28,0,0,0-1.75,1.83l5.66,6.57h-8.32a2.69,2.69,0,0,1-2.88-2.84V289.41h11.08a2.74,2.74,0,0,1,2.88,2.84v7.91Z"/>
+          </g>
+        </g>
+        <rect class="cls-6" x="54.7" y="335.44" width="227.78" height="20.8"/>
+        <polygon class="cls-9" points="282.47 356.24 54.7 356.24 282.47 335.44 282.47 356.24"/>
+      </g>
+      <g id="pink" class="fade-in cloud pink">
+        <path class="cls-22" d="M279.1,152.48l5.85-5.93-5.85-5.93h0l-2.07-2.1V119.68a4,4,0,0,0-4-4H194.32a4,4,0,0,0-4,4v36a4,4,0,0,0,4,4H273a4,4,0,0,0,4-4v-1.13l2.07-2.1h0Z"/>
+        <g>
+          <g>
+            <polygon class="cls-25" points="288.08 143.22 276.38 155.09 276.38 131.36 288.08 143.22"/>
+            <polygon class="cls-26" points="282.23 137.29 276.38 131.36 276.38 155.09 282.23 149.16 282.23 137.29"/>
+          </g>
+          <rect class="cls-25" x="193.44" y="112.34" width="86.72" height="44.06" rx="4.01" ry="4.01"/>
+          <g>
+            <rect class="cls-27" x="204.27" y="120.25" width="65.06" height="7.53" rx="2.79" ry="2.79"/>
+            <rect class="cls-27" x="204.27" y="130.21" width="32.53" height="7.53" rx="2.79" ry="2.79"/>
+            <rect class="cls-27" x="204.27" y="140.96" width="57.01" height="7.53" rx="2.79" ry="2.79"/>
+          </g>
+        </g>
+        <g id="dots-2" data-name="dots">
+          <circle class="cls-4 fade-in dot three" cx="248.21" cy="169.17" r="3.68"/>
+          <circle class="cls-4 fade-in dot two" cx="259.62" cy="169.17" r="3.68"/>
+          <circle class="cls-4 fade-in dot one" cx="271.03" cy="169.17" r="3.68"/>
+        </g>
+      </g>
+      <g id="gray" class="fade-in cloud gray">
+        <path class="cls-22" d="M167.65,108.6H58.56A5.58,5.58,0,0,0,53,114.16v50a5.58,5.58,0,0,0,5.56,5.56H114.4l12.22,12.06,12.22-12.06h28.81a5.58,5.58,0,0,0,5.56-5.56v-50A5.58,5.58,0,0,0,167.65,108.6Z"/>
+        <g>
+          <polygon class="cls-5" points="125.9 177.4 142.34 161.18 109.45 161.18 125.9 177.4"/>
+          <polygon class="cls-28" points="117.68 169.29 109.45 161.18 142.34 161.18 134.12 169.29 117.68 169.29"/>
+        </g>
+        <rect class="cls-5" x="52.27" y="104.27" width="120.22" height="61.08" rx="5.56" ry="5.56"/>
+        <g>
+          <g>
+            <rect class="cls-25" x="64.7" y="115.52" width="14.65" height="9.27" rx="3.73" ry="3.73"/>
+            <rect class="cls-29" x="101.96" y="115.52" width="58.11" height="9.27" rx="3.73" ry="3.73"/>
+            <rect class="cls-23" x="81.52" y="115.52" width="16.36" height="9.27" rx="3.73" ry="3.73"/>
+          </g>
+          <g>
+            <rect class="cls-25" x="81.52" y="130.17" width="12.07" height="9.27" rx="3.39" ry="3.39"/>
+            <rect class="cls-29" x="112.2" y="130.17" width="47.86" height="9.27" rx="3.39" ry="3.39"/>
+            <rect class="cls-23" x="95.37" y="130.17" width="13.48" height="9.27" rx="3.39" ry="3.39"/>
+          </g>
+          <g>
+            <rect class="cls-25" x="81.52" y="144.82" width="12.07" height="9.27" rx="3.39" ry="3.39"/>
+            <rect class="cls-29" x="112.2" y="144.82" width="47.86" height="9.27" rx="3.39" ry="3.39"/>
+            <rect class="cls-23" x="95.37" y="144.82" width="13.48" height="9.27" rx="3.39" ry="3.39"/>
+          </g>
+        </g>
+        <g id="dots">
+          <circle class="cls-4 fade-in dot seven" cx="57.21" cy="179.17" r="3.68"/>
+          <circle class="cls-4 fade-in dot six" cx="68.62" cy="179.17" r="3.68"/>
+          <circle class="cls-4 fade-in dot five" cx="80.03" cy="179.17" r="3.68"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

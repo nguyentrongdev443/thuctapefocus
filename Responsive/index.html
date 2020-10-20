@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leading Meganto eCommerce Agency</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".header-button-menu").click(function(){		
+			if($(".header-button-menu i").hasClass("fas fa-bars")){	
+				$("#header-menu-js").addClass("menu-active");
+				$(".header-button-menu i").removeClass("fas fa-bars");
+				$(".header-button-menu i").toggleClass("fa fa-times");
+				$(".page-overlay").toggleClass("is-visible");
+				if($(".header-button-search i").hasClass("fa fa-times")){
+					$(".header-button-search i").removeClass("fa fa-times");
+					$(".header-button-search i").toggleClass("fas fa-search");
+					$(".search-form").removeClass("is-visible");	
+					$(".page-overlay").toggleClass("is-visible");	
+					$("body").addClass("prevent-scroll");			
+				}else{
+					$("#header-menu-js").addClass("menu-active");
+					$("body").addClass("prevent-scroll");
+					
+				}
+			}else{
+				$("#header-menu-js").removeClass("menu-active");
+				$(".header-button-menu i").removeClass("fa fa-times");
+				$(".header-button-menu i").toggleClass("fas fa-bars");
+				$("body").removeClass("prevent-scroll");
+				$(".page-overlay").removeClass("is-visible");
+			}
+		});
+		$(".header-button-search").click(function(){
+			if($(".header-button-search i").hasClass("fas fa-search")){
+				$(".header-button-search i").removeClass("fas fa-search");
+				$(".header-button-search i").toggleClass("fa fa-times");
+				$(".search-form").toggleClass("is-visible");
+				$(".page-overlay").toggleClass("is-visible");
+				
+				if($(".header-button-menu i").hasClass("fa fa-times")){
+					$("#header-menu-js").removeClass("menu-active");
+					$(".header-button-menu i").removeClass("fa fa-times");
+					$(".header-button-menu i").toggleClass("fas fa-bars");
+					$(".page-overlay").toggleClass("is-visible");
+					$("body").addClass("prevent-scroll");			
+				}else{
+					$("body").addClass("prevent-scroll");
+				}
+			}else{
+				$(".header-button-search i").toggleClass("fas fa-search");
+				$(".header-button-search i").removeClass("fa fa-times");
+				$(".search-form").removeClass("is-visible");
+				$(".page-overlay").removeClass("is-visible");
+				$("body").removeClass("prevent-scroll");
+			}
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$(".footer-menu__title").click(function(){
+			if($(this).hasClass("footer-menu__title--is-visible")){
+                $(this).removeClass("footer-menu__title--is-visible");
+                $(".footer-menu__title").removeClass("footer-menu__title--is-visible");
+				$(this).next().hide();
+			}else{
+                $(".footer-menu__title").removeClass("footer-menu__title--is-visible");
+				$(this).addClass("footer-menu__title--is-visible");
+				$(".footer-menu__list").hide(50);
+				$(this).next().show(100);
+			}
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$(".cookie-banner_btn").click(function(){
+			$(".cookie-banner").css("display","none")
+		});
+	})
+</script>
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+<!--HEADER-->
+<header id="header" class="header">
+    <div class="header-grid">
+		<!--LOGO-->
+		<a class="logo-trangchu" href="index.html" rel="home" title="Inchoo"></a>
+		<!--MENU-->
+        <nav class="menu" id="header-menu-js">
+            <ul id="menu-header-list" class="menu-list">
+                <li class="menu-item" id="menu-item-active"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="blog.html">Blog</a></li>
+                <li class="menu-item"><a href="#">Porfolio</a></li>
+                <li class="menu-item"><a href="service.html">Services</a></li>
+                <li class="menu-item"><a href="about.html">About</a></li>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
+			</ul>     
+		</nav>
+		<!--BUTTON SEARCH-->
+		<button type="button" class="header-button-search header-button">
+			<i class="fas fa-search"></i>
+			<span> Search</span>
+		</button>
+		<!--BUTTON HIRE US-->
+		<button type="button" class="header-button-hire-us header-button" onclick="location.href='hire-us.html'">
+			<i class="far fa-envelope"></i>
+			<span> Hire Us</span>
+		</button>
+		<!--BUTTON MENU-->
+		<button type="button" class="header-button-menu header-button">
+			<i class="fas fa-bars"></i></i>
+			<span> Menu</span>
+	</button>
+    </div>
+</header>
+<!--MAIN-->
+<main class="main">
+	<!--FORM SERCH-->
+	<form action="#" class="search-form">
+		<input type="search" class="input-text search-form-input" placeholder="Search here...">
+	</form>
+	<!--CONTENT-->
+	<div class="content">
+		<!--Banner-->
+		<div class="banner page-section" style="background-image: url('images/inchoo-3.jpg')">			
+			<div class="noidung-banner">
+				<h1 class="xl">Leading Magento eCommerce agency with 12 years of experience.</h1>
+				<p>Experienced. Dynamic. Transparent. Recognized. Certified.<br>
+					Find out more <a href="#">about us</a>
+					and the variety of 
+					<a href="#">services we offer</a>
+					.
+				</p>
+			</div>
+		</div>
+		<!--What we do development-->
+		<div class="hp__what-we-do-development page-section">
+			<div class="grid-large-container">
+				<img src="images/development-home-img_01.png" >
+				<div class="hp__what-we-do-content">
+					<h2>Magento Development & Consulting</h2>
+					<p>Starting from scratch, migrating from another platform or improving your existing store? We're Magento agency
+						for you!
+					</p>
+					<p>
+						<strong>Magento</strong> is a powerful and agile open source platform with high number of B2B and B2C
+						built-in functionalities and
+						huge 3rd party extension selection and we are one of the <strong>most experienced teams</strong> you can find.
+						In over a
+						decade, we served more than 150 clients on over 500 projects on Magento!
+					</p>
+					<ul>
+						<li>
+							<a href="#">Magento development <i class="fas fa-chevron-right"></i></a>
+						</li>
+						<li>
+							<a href="#">Migration to Magento 2 <i class="fas fa-chevron-right"></i></a>
+						</li>
+						<li>
+							<a href="#">Magento Design <i class="fas fa-chevron-right"></i></a>
+						</li>
+					</ul>
+				</div>
+				
+					
+				
+			</div>
+		</div>
+		<!--What we do analysis marketing -->
+		<div class="hp__what-we-do-analysis-marketing page-section">
+			<div class="grid-large-container">
+				<div class="hp__what-we-do-content">
+					<h2>eCommerce Analysis</h2>
+					<p>Your store is too slow? Too many potential customers are leaving sales funnel? We're Magento agency for you!</p>
+					<ul>
+						<li><a href="seo-audit.html">Seo Audit <i class="fas fa-chevron-right"></i></a></li>
+						<li><a href="#">Technical Audit <i class="fas fa-chevron-right"></i></a></li>
+						<li><a href="#">UX Audit <i class="fas fa-chevron-right"></i></a></li>
+						<li><a href="#">PPC Audit <i class="fas fa-chevron-right"></i></a></li>
+						<li><a href="#">Google Analytics Audit <i class="fas fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
+				<div class="hp__what-we-do-content">
+					<h2>eCommerce Marketing</h2>
+					<p>Need to increase revenue from your PPC campaigns? We have experience and knowledge to do just that!</p>
+					<ul>
+						<li><a href="#">PPC <i class="fas fa-chevron-right"></i></a></li>
+						<li><a href="#">Google Shopping <i class="fas fa-chevron-right"></i></a></li>
+						<li><a href="#">Advanced Analytics <i class="fas fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
+				<img src="images/marketin-visual-homepage_02.png">
+			</div>		
+		</div>
+		<!--Featured Work-->
+		<div class="hp__featured-work page-section">
+			<div class="featured-work-title-container">
+				<h2 class="o-page-section-title">Featured Work</h2>
+				<p class="o-page-section-subtitle">See more results on our <a href="#">portfolio</a>.</p>				
+			</div>
+			<div id="slides" class="carousel slide" data-ride="carousel">
+				<ul class="carousel-indicators slide">
+					<li data-target="#slides" data-slide-to="0" class="active">Packaging Price</li>
+					<li data-target="#slides" data-slide-to="1"></a>Shop 4 Runners</li>
+					<li data-target="#slides" data-slide-to="2">Zee & Co</li>
+				</ul>
+				<div class="carousel-inner">
+					<div class="item active" style="width: 100%;">
+						<div class="featured-work-item">
+							<a href="#" class="h4" title="Packaging Price">Packaging Price</a>
+							<p>With an information architecture overhaul, redesign and digital marketing services, we brought this B2B packaging supplier to new heights!</p>
+							<a href="#" title="Packaging Price" class="featured-work-item-devices">
+								<div class="device-wrapper device-wrapper--macbook">
+									<div class="device" data-device="Macbook2015" data-orientation="portrait" style="background-image: url(images/portrait_white.png);">
+										<div class="screen">
+											<img src="images/packaging-price-large.png">
+										</div>
+									</div>
+									<img src="images/macbook_shadow.png" class="device-shadow--macbook">
+								</div>
+								<div class="device-wrapper device-wrapper--iphone">
+									<div class="device" data-device="Iphone7" data-orientation="portrait" style="background-image: url(images/portrait_black.png);">
+										<div class="screen">
+											<img src="images/packaging-price-small.png">
+										</div>
+									</div>
+									<img src="images/iphone_shadow.png" class="device-shadow--iphone">
+								</div>
+							</a>
+							<div class="featured-work-item-stats">
+								<div class="o-stats">
+									<div class="o-stats--percentage">
+										<i class="fas fa-arrow-up"></i>
+										73%
+									</div>
+									<div class="o-stats--title">Total Users</div>
+								</div>
+								<div class="o-stats">
+									<div class="o-stats--percentage">
+										<i class="fas fa-arrow-up"></i>
+										83%
+									</div>
+									<div class="o-stats--title">Direction Online Revenue</div>
+								</div>
+								<div class="o-stats">
+									<div class="o-stats--percentage">
+										<i class="fas fa-arrow-up"></i>
+										94%
+									</div>
+									<div class="o-stats--title">Google Ads Revenue</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item" style="width: 100%;">
+                        <div class="featured-work-item">
+                            <a href="#" class="h4" title="Shop 4 Runners">Shop 4 Runners</a>
+                            <p>With technical upgrade and full redesign, we reinvented the running game for these running experts!</p>
+                            <a href="#" title="Shop 4 Runners" class="featured-work-item-devices">
+                                <div class="device-wrapper device-wrapper--macbook">
+                                    <div class="device" data-device="Macbook2015" data-orientation="portrait" style="background-image: url(images/portrait_white.png);">
+                                        <div class="screen">
+                                            <img src="images/shop4runners-large.jpg">
+                                        </div>
+                                    </div>
+                                    <img src="images/macbook_shadow.png" class="device-shadow--macbook">
+                                </div>
+                                <div class="device-wrapper device-wrapper--iphone">
+                                    <div class="device" data-device="Iphone7" data-orientation="portrait" style="background-image: url(images/portrait_black.png);">
+                                        <div class="screen">
+                                            <img src="images/shop4runners-small.jpg">
+                                        </div>
+                                    </div>
+                                    <img src="images/iphone_shadow.png" class="device-shadow--iphone">
+                                </div>
+                            </a>
+                            <div class="featured-work-item-stats">
+                                <div class="o-stats">
+                                    <div class="o-stats--percentage">
+                                        <i class="fas fa-arrow-up"></i>
+                                        46%
+                                    </div>
+                                    <div class="o-stats--title">Revenue</div>
+                                </div>
+                                <div class="o-stats">
+                                    <div class="o-stats--percentage">
+                                        <i class="fas fa-arrow-up"></i>
+                                        33%
+                                    </div>
+                                    <div class="o-stats--title">eCommerce Conversion Rate</div>
+                                </div>
+                                <div class="o-stats">
+                                    <div class="o-stats--percentage">
+                                        <i class="fas fa-arrow-up"></i>
+                                        38%
+                                    </div>
+                                    <div class="o-stats--title">Exits after the search in the store</div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+					<div class="item" style="width: 100%;">
+                        <div class="featured-work-item">
+                            <a href="#" class="h4" title="Zee & Co">Zee & Co</a>
+                            <p>New technology implementations, revamp and cross-device optimization at work!</p>
+                            <a href="#" title="Zee & Co" class="featured-work-item-devices">
+                                <div class="device-wrapper device-wrapper--macbook">
+                                    <div class="device" data-device="Macbook2015" data-orientation="portrait" style="background-image: url(images/portrait_white.png);">
+                                        <div class="screen">
+                                            <img src="images/zeeandco-large.jpg">
+                                        </div>
+                                    </div>
+                                    <img src="images/macbook_shadow.png" class="device-shadow--macbook">
+                                </div>
+                                <div class="device-wrapper device-wrapper--iphone">
+                                    <div class="device" data-device="Iphone7" data-orientation="portrait" style="background-image: url(images/portrait_black.png);">
+                                        <div class="screen">
+                                            <img src="images/zeeandco-small.jpg">
+                                        </div>
+                                    </div>
+                                    <img src="images/iphone_shadow.png" class="device-shadow--iphone">
+                                </div>
+                            </a>
+                            <div class="featured-work-item-stats">
+                                <div class="o-stats">
+                                    <div class="o-stats--percentage">
+                                        <i class="fas fa-arrow-up"></i>
+                                        159%
+                                    </div>
+                                    <div class="o-stats--title">Revenue</div>
+                                </div>
+                                <div class="o-stats">
+                                    <div class="o-stats--percentage">
+                                        <i class="fas fa-arrow-up"></i>
+                                        128%
+                                    </div>
+                                    <div class="o-stats--title">Transactions</div>
+                                </div>
+                                <div class="o-stats">
+                                    <div class="o-stats--percentage">
+                                        <i class="fas fa-arrow-up"></i>
+                                        141%
+                                    </div>
+                                    <div class="o-stats--title">Unique Purchases</div>
+                                </div>
+                                <div class="o-stats">
+                                    <div class="o-stats--percentage">
+                                        <i class="fas fa-arrow-up"></i>
+                                        14%
+                                    </div>
+                                    <div class="o-stats--title">Average order value</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<a class="left carousel-control" href="#slides" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#slides" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+			
+		</div>		
+		<!--Reasons-->
+		<div class="reasons">
+			<div class="reasons-container">
+				<div class="reasons-title">
+					<h2 class="o-reasons-title">Reasons to choose us</h2>
+				</div>
+				<div class="o-reasons_items">
+					<div class="o-reason_item">
+						<span class="o-reason_item-number">01</span>
+						<a class="o-reason_item-badge" href="#"><img src="images/professional_solutions_partner_v.svg"></a>
+						<h3 class="o-reason_item-title h2">Certified</h3><br>
+						<p class="o-reason_item-text">We deliver remarkable eCommerce experience for your Magento store. Our
+							solutions in developing Magento stores meet all your eCommerce needs and ideas. We are experienced, trusted,
+							recognized and certified Magento agency.</p>
+					</div>
+					<div class="o-reason_item">
+						<span class="o-reason_item-number">02</span>
+						<a class="o-reason_item-badge" href="#"><img src="images/nnuxbadge.png"></a>
+						<h3 class="o-reason_item-title h2">Experienced</h3><br>
+						<p class="o-reason_item-text">Your customers are the reason your business is here. 
+							That's why every eCommerce store must be designed and organized around user-centric strategy. 
+							We are building websites for real people, and our designers are certified for exactly that.
+						</p>
+					</div>
+					<div class="o-reason_item">
+						<span class="o-reason_item-number">03</span>
+						<a class="o-reason_item-badge" href="#"><img src="images/google_premium_partner.png"></a>
+						<h3 class="o-reason_item-title h2">Recognized</h3><br>
+						<p class="o-reason_item-text">We have over 12 years of eCommerce experience. We know what's important for
+							your business and how to grow your revenue. We are using that knowledge and experience to create successful
+							campaigns. That's our advantage over other marketing agencies.</p>
+					</div>
+					<div class="o-reason_item">
+						<span class="o-reason_item-number">04</span>
+						<a class="o-reason_item-badge" href="#"><img src="images/badge-aaa-2018.png"></a>
+						<h3 class="o-reason_item-title h2">Trusted</h3><br>
+						<p class="o-reason_item-text">This certificate proves we are a stable and profitable company. It also
+							reflects our passion for doing business. We are not only a Magento eCommerce agency, but also an agency with
+							which you can establish a long-term relationship.</p>
+					</div>
+				</div>
+				<a class="reason_view-all btn btn-green" href="#">See more</a>
+			</div>
+		</div>
+		<!--Client say-->
+		<div class="clients-say page-section">
+			<div class="clients-say-title">
+				<h3 class="o-page-section-title">What our clients say about us</h3>
+			</div>
+			<div id="slide-client-say" class="clients-say-container carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="item active" style="width: 100%;">
+						<div class="text-content slick-list">
+							<p class="client-say-text">From the moment we approached Inchoo to develop our new Zee&Co responsive website,
+								we were impressed with their highly skilled developers and Magento knowledge.
+								The whole team took the time to understand our requirements and made recommendations based on our business demands.
+								The result is a device responsive website which provides customers with a user friendly experience and increased conversions.
+							</p>
+						</div>
+						<div class="client-say-author">
+							<div class="author-image">
+								<img src="images/joann.jpg" width="100px" height="100px">
+							</div>
+							<p class="author-info">
+								— Joann Johnstone, Operations Director, <a href="#" class="author-website">Zee&Co</a>
+							</p>
+						</div>
+					</div>
+					<div class="item" style="width: 100%;">
+						<div class="text-content slick-list">
+							<p class="client-say-text">
+								I wanted to take a quick moment to thank the entire Inchoo team that worked with me on our project. It's been an absolute pleasure. Being a relatively new business and having experienced the other end of Magento developers, it was clear that finding a team of people that had the right values and pride in their work, just like we do, shouldn't be underestimated. So it was a big relief to have found the right fit for us with Inchoo. While it's still early days, I couldn't be more pleased with results since launching our new site. We look forward to bigger things to come.
+							</p>
+						</div>
+						<div class="client-say-author">
+							<div class="author-image">
+								<img src="images/clickable_testimonial.png" width="100px" height="100px">
+							</div>
+							<p class="author-info">
+								— Lucas O'Brien, <a href="#" class="author-website">Clickable Automotive</a>
+							</p>
+						</div>
+					</div>
+					<div class="item" style="width: 100%;">
+						<div class="text-content slick-list">
+							<p>Dear Inchooers &amp; Plusers, Yesterday Ivica, team Manaus and Branko from Plus Hosting succesfully launched the new 
+								<a href="#" title="www.sheeel.com/">www.sheeel.com</a>
+								 - one of the first adaptive Magento websites. A big thank to everyone in Team Inchoo and Plus Hosting for make this a success. While we still have some work to do, the mass reaction from our customers was positive and in awe of the new website. I look forward to more great things done at Sheeel and more awesome projects to work with Inchoo and Plus. On behalf of the entire 
+								 <a href="#" title="https://www.taw9eel.com/">Taw9eel eCommerce Team</a>
+								  - Thank you for making it the most kick-ass website in the Middle East!
+							</p>
+						</div>
+						<div class="client-say-author">
+							<div class="author-image">
+								<img src="images/sheeel_testimonial.png" width="100px" height="100px">
+							</div>
+							<p class="author-info">
+								— Nasser Al-Sabah, <a href="#" class="author-website">Sheeel</a>
+							</p>
+						</div>
+					</div>
+					<div class="item" style="width: 100%;">
+						<div class="text-content slick-list">
+							<p class="client-say-text">
+								Working with Inchoo on our first website opened our eyes to how painless it can be to have a website developed and designed. With their knowledge and expertise, combined with daily communication, we were able to produce a website that matched the needs of our customer, our administrator, and our company. Their attention to detail and project completion has made our job as administrators so much easier—we can now fully utilize our website and make changes whenever we want to. And because of their complete interface integration, the look and feel is spectacular! If you want a user friendly website and a development team to be at your beck and call, Inchoo is the company you are looking for.
+							</p>
+						</div>
+						<div class="client-say-author">
+							<div class="author-image">
+								<img src="images/teraflex_testimonial-1.png" width="100px" height="100px">
+							</div>
+							<p class="author-info">
+								— Teraflex, <a href="#" class="author-website">Teraflex</a>
+							</p>
+						</div>
+					</div>
+					<div class="item" style="width: 100%;">
+						<div class="text-content slick-list">
+							<p class="client-say-text">
+								We came to Inchoo with a project to salvage, and they helped us tackle that and more! They are fantastic to work with and are always there when something comes up that needs to be addressed, big or small. They are able to evaluate projects to find the best path forward for the needs of A1Supplements and our customers! We look forward to continuing our development relationship to keep our A1Supplements website ahead of the game!
+							</p>
+						</div>
+						<div class="client-say-author">
+							<div class="author-image">
+								<img src="images/A1Supplements-logo.png" width="100px" height="100px">
+							</div>
+							<p class="author-info">
+								— Nick Saliba, <a href="#" class="author-website">A1Supplements</a>
+							</p>
+						</div>
+					</div>
+					<div class="item" style="width: 100%;">
+						<div class="text-content slick-list">
+							<p class="client-say-text">
+								We are working with Inchoo for over 5 years and we are really happy with our collaboration. We were especially pleased that the team working on our project joined us in our offices in Germany for a planning phase of the new project. Their organization and work are top levels. We are really happy to have such an amazing technical partner on our side and we are sure that Inchoo will help us to grow further in our eCommerce strategy.
+							</p>
+						</div>
+						<div class="client-say-author">
+							<div class="author-image">
+								<img src="images/shop4runners-logo-1.png" width="100px" height="100px">
+							</div>
+							<p class="author-info">
+								— Shop4Runners, <a href="#" class="author-website">Shop4Runners</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<ul class="o-testimonial__pagination carousel-indicators slide" style="display: flex;">
+					<li data-target="#slide-client-say" data-slide-to="0" class="active">
+						<div><img src="images/joann.jpg"></div>
+						<span>1</span>
+					</li>
+					<li data-target="#slide-client-say" data-slide-to="1">
+						<div><img src="images/clickable_testimonial.png"></div>
+						<span>1</span>
+					</li>
+					<li data-target="#slide-client-say" data-slide-to="2">
+						<div><img src="images/teraflex_testimonial-1.png"></div>
+						<span>1</span>
+					</li>
+					<li data-target="#slide-client-say" data-slide-to="3">
+						<div><img src="images/sheeel_testimonial.png"></div>
+						<span>1</span>
+					</li>
+					<li data-target="#slide-client-say" data-slide-to="4">
+						<div><img src="images/A1Supplements-logo.png"></div>
+						<span>1</span>
+					</li>
+					<li data-target="#slide-client-say" data-slide-to="5">
+						<div><img src="images/shop4runners-large.jpg"></div>
+						<span>1</span>
+					</li>
+				</ul>			
+			</div>
+		</div>
+		<!--Lastest posts-->
+		<div class="lastest-posts">
+			<div class="lastest-posts-container">
+				<div class="lastest-posts-title">
+					<div class="o-lastest-posts-title o-page-section-title">Blog and Highlights</div>
+					<p class="o-lastest-posts-subtitle">Every month over 200,000 people searching for Magento solutions 
+						<a href="#">read our blog</a>.
+					</p>
+				</div>
+				<ul> 
+					<li  class="o-article-card o-article-card--highlight">
+						<a href="#">
+							<img src="images/inchoo-automotive-ebook-highlight.jpg" width="615" height="513">
+							<h2 class="o-article-card__title h4">Automotive Aftermarket eCommerce Guide – eBook</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card o-article-card--highlight">
+						<a href="#">
+							<img src="images/magento-design.png" width="615" height="513">
+							<h2 class="o-article-card__title h4">Need incremental changes or a custom design for your store?</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="marketing-online/google-concealing-search-terms.html" class="o-article-card__image-link">
+							<img src="images/google_concealing-inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/davorin-cernoga-1.jpg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Davorin Cernoga</a>
+								,
+								<time class="o-article-card__date">Oct 07, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="marketing-online/google-concealing-search-terms.html">Google is concealing your search terms, and it is bad</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/Moving-the-Add-to-Cart-button-and-error-validation-message-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/danijel-vrgoc.jpeg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Danijel Vrgoc</a>
+								,
+								<time class="o-article-card__date">Sep 15, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">Moving the Add to Cart validation error message on product page</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/google-monthly-budget_inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/davorin-cernoga-1.jpg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Davorin Cernoga</a>
+								,
+								<time class="o-article-card__date">Sep 02, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">How does Google calculate the monthly budget of your campaigns?</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/not-in-buybox_inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/davorin-cernoga-1.jpg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Davorin Cernoga</a>
+								,
+								<time class="o-article-card__date">Sep 02, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">Not in Buy Box – Status Meaning</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/amazon-sponsored-products_inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/tea-pisac-benes.jpeg"" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Tea Pisac Benes</a>
+								,
+								<time class="o-article-card__date">Aug 28, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">Impressions in Amazon Advertising Are Not All The Same – Meet The Differences</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/ecommerce-personalization_inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/zoran-vorkapic.jpeg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Zoran Vorkapic</a>
+								,
+								<time class="o-article-card__date">Aug 27, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">Getting started with eCommerce personalization</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/buy-box_inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/davorin-cernoga-1.jpg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Davorin Cernoga</a>
+								,
+								<time class="o-article-card__date">Aug 19, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">How to Check Buy Box Eligibility on Amazon?</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/monthly-charge-Gads_inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/davorin-cernoga-1.jpg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Davorin Cernoga</a>
+								,
+								<time class="o-article-card__date">Aug 14, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">Monthly Charging Limit Reached in Google Ads?</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/schema-markup-ecommerce_inchoo-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/andreja-cicak.jpg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Andreja Cicak</a>
+								,
+								<time class="o-article-card__date">Sep 01, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">Schema Markup for eCommerce Websites</a>
+							</h2>
+						</a>
+					</li>
+
+					<li  class="o-article-card">
+						<a href="#" class="o-article-card__image-link">
+							<img src="images/checkout-615x243.jpg">
+							<div class="o-article-card__author-img">
+								<img src="images/marko-brisevac.jpeg" width="36px" height="36px">
+							</div>
+							<div class="o-article-card__meta">
+								<a href="#">Marko Brisevac</a>
+								,
+								<time class="o-article-card__date">Sep 08, 2020</time>
+								|
+								<a href="#"><i class="fas fa-comment-alt"></i>  0</a>
+							</div>
+							<h2 class="o-article-card__title h2">
+								<a href="#">5 UX improvements for Magento checkout page design</a>
+							</h2>
+						</a>
+					</li>
+				</ul>
+				<p class="latest-posts__last-sentence"><a href="blog.html">Go to our blog</a> and find more interesting articles about the Magento world.</p>
+			</div>
+		</div>
+	</div>
+</main>
+<!-- HRIE US CONTAINER-->
+<div class="hire-us">
+	<div class="hire-us-cont">
+		<div class="hire-us-title h2">Tell us about your project</div>
+		<p class="hire-us-subtitle">Drop us a line. We'd love to know more about your project.</p>
+		<button type="button" class="btn-gray" onclick="location.href='hire-us.html'">
+			<i class="far fa-envelope"></i>
+			<span> Hire Us</span>
+		</button>
+	</div>
+</div>
+<!--FOOTER-->
+<footer class="footer">
+	<div class="footer-menu__container">
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Blog categories</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="blog.html">All</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Magento</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento2</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">UX/UI Design</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce Talk</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Online Marketing</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Dev Talk</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Life at Inchoo</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Audits</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="seo-audit.html">SEO Audit</a>
+				</li>			
+				<li class="footer-menu-item ">
+					<a href="#">Technical Audit</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce UX Audit</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">PPC Audit Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Google Analytics Audit</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Magento</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">About Magento</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Magento Website Development Process</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento Development Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento 2 Development</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Custom Magento Development</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento 2 Migration Services</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Magento Design</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Marketing</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">eCommerce PPC Management</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Google Shopping Management</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Google Tag Manager</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+		<div class="footer-menu">
+			<div class="footer-menu__title">Featured Services</div>
+			<ul class="footer-menu__list">
+				<li class="footer-menu-item ">
+					<a href="#">Fastly</a>
+				</li>				
+				<li class="footer-menu-item ">
+					<a href="#">Pimcore</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">ShpperHQ</a>
+				</li>
+				<li class="footer-menu-item ">
+					<a href="#">Klevu</a>
+				</li>
+			</ul>
+		</div>
+		<!--Footer menu selection-->
+	</div>
+	<!--hr-->
+	<div class="footer-hr__container">
+		<hr>
+	</div>
+	<div class="footer-menu__container footer-menu-container-hafl">
+		<div class="footer-menu">
+			<div class="footer-service-dev">
+				<img src="images/professional_solutions_partner_v.svg" width="86px" height="87px">
+				<img src="images/badge-magento-2-solution-specialist.png" width="56px" height="100px">
+				<img src="images/badge-magento-2-professional-developer.png" width="56px" height="100px">
+				<img src="images/badge-magento-2-professional-frontend-developer.png" width="56px" height="100px">
+				<img src="images/google_premium_partner.png"  width="126px" height="63px">
+			</div>
+		</div>
+		<div class="footer-menu">
+			<div class="footer-menu-newsletter">
+				<div class="footer-newletter-title">Newsletter</div>
+				<p class="footer-newsletter-subtitle">
+					Sign up for our newsletter to get your dose of useful eCommerce, Magento and Inchoo news and events.
+				</p>
+				<a class="button-newletter btn-green btn" hre="#" title="Subscribe to our newsletter">Subscribe to our newsletter</a>
+			</div>
+		</div>
+	</div>
+	<!--hr-->
+	<div class="footer-hr__container">
+		<hr>
+	</div>
+	<!--Footer social list-->
+	<ul class="footer-social-list">
+		<li><a href="#" title="Find us on Facebook"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#" title="Find us on Twitter"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="#" title="Find us on LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+		<li><a href="#" title="Find us on Instagram"><i class="fab fa-instagram"></i></a></li>
+	</ul>
+	<!--Footer contact-->
+	<div class="footer-contact">
+		<a href="#"><i class="far fa-envelope"></i>
+			web@inchoo.net
+		</a>
+		<a href="#"><i class="fas fa-phone"></i>
+			CRO: +385 31 200 729
+		</a>
+		<a href="#"><i class="fas fa-phone"></i>
+			US: +1 815 671 4208
+		</a>
+	</div>
+	<!--Footer back to top-->
+	<a href="#header" class="footer-back-to-top" title="Back to top">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+	<!--Footer copyright-->
+	<div class="footer-copyright">		
+		2020 © Inchoo. All rights reserved. 
+		<a href="#" title="Privacy & Data Protection Policy">Privacy & Data Protection Policy</a>
+	</div>
+</footer>
+<div class="page-overlay"></div>
+<div id="outdated"></div>
+<div class="cookie-banner" style="opacity: 1;">
+	<span class="cookie-banner-message">
+		We use cookies on our website to support technical features that enhance your user experience. We also use analytics. To opt-out from analytics, 
+		<a href="#" title="Click for more information" title="click for more information">click for more information</a>
+		.
+    
+	</span>
+	<div class="cookie-banner-btn-cont">
+		<button type="button" class="btn-green cookie-banner_btn" title="I've read it">I've read it</button>
+	</div>
+</div>
+</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+</script>
+</body>
+</html>
