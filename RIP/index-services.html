@@ -1,0 +1,569 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<title>Leading Magento eCommerce Agency ● Inchoo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style-services.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<style>
+		
+	</style>
+	<script> 
+		/*Xử lý menu header*/
+		$(document).ready(function(){
+			$(".header-btn-search").on({
+				'click': function() {
+					var clas = ($('#btn-search').attr('class') === 'fas fa-search')
+						? 'fas fa-times'
+						: 'fas fa-search';
+					$("#btn-search").attr('class', clas);
+					
+					var sty = ($('#btn-search').attr('style') === 'color:#000000')
+						? 'color:#79ad36'
+						: 'color:#000000';
+					$("#btn-search").attr('style', sty);
+					
+					var hidden = ($('#btn-search').attr('style') === 'color:#79ad36')
+						? 'overflow: hidden'
+						: '';
+					$("body").attr('style', hidden);
+					
+					var width = $(window).width();
+					if(width<768){
+						$(".menu").hide(100);
+						$("#btn-menu").attr('class', "fas fa-bars");
+						$('#btn-menu').attr('style',"color:#000000");
+					}
+				
+					$(".search-form").slideToggle(100);
+					$("#search-text").focus();
+					$(":focus").css("background-color", "white");
+				}
+			});
+			
+		/*Xử lý menu header*/
+			$(".header-btn-menu").on({
+				'click': function() {
+					var clas = ($('#btn-menu').attr('class') === 'fas fa-bars')
+						? 'fas fa-times'
+						: 'fas fa-bars';
+					 $("#btn-menu").attr('class', clas);
+					
+					var sty = ($('#btn-menu').attr('style') === 'color:#000000')
+						? 'color:#79ad36'
+						: 'color:#000000';
+					 $("#btn-menu").attr('style', sty);
+					
+					var hidden = ($('#btn-menu').attr('style') === 'color:#79ad36')
+						? 'overflow: hidden'
+						: '';
+					$("body").attr('style', hidden);
+					
+					$(".search-form").hide(100);
+					$("#btn-search").attr('class', "fas fa-search");
+					$('#btn-search').attr('style',"color:#000000");
+					$(".menu").toggle(100);
+				}
+			});
+		/*Xử lý menu footer - Blog*/	
+			$("#nav-Blog").on({
+				'click': function() {
+					var width = $(window).width();
+					if(width<768){
+						var clas = ($('#down').attr('class') === 'fas fa-chevron-down')
+							? 'fas fa-chevron-up'
+							: 'fas fa-chevron-down';
+						$("#down").attr('class', clas);
+						$("#down1,#down2,#down3,#down4").attr('class', 'fas fa-chevron-down');
+						$("#menu-blog-menu").toggle(100);
+						$("#menu-ecommerce-audits,#menu-magento,#menu-online-marketing,#menu-featured").hide(100);
+					}
+				}
+			});
+		/*Xử lý menu footer - Audits*/
+			$("#nav-Audits").on({
+				'click': function() {
+					var width = $(window).width();
+					if(width<768){
+						var clas = ($('#down1').attr('class') === 'fas fa-chevron-down')
+							? 'fas fa-chevron-up'
+							: 'fas fa-chevron-down';
+						$("#down1").attr('class', clas);
+						$("#down,#down2,#down3,#down4").attr('class', 'fas fa-chevron-down');
+						$("#menu-ecommerce-audits").toggle(100);
+						$("#menu-blog-menu,#menu-magento,#menu-online-marketing,#menu-featured").hide(100);
+					}
+				}
+			});
+		/*Xử lý menu footer - Magento*/	
+			$("#nav-Magento").on({
+				'click': function() {
+					var width = $(window).width();
+					if(width<768){
+						var clas = ($('#down2').attr('class') === 'fas fa-chevron-down')
+							? 'fas fa-chevron-up'
+							: 'fas fa-chevron-down';
+						$("#down2").attr('class', clas);
+						$("#down1,#down,#down3,#down4").attr('class', 'fas fa-chevron-down');
+						$("#menu-magento").toggle(100);
+						$("#menu-blog-menu,#menu-ecommerce-audits,#menu-online-marketing,#menu-featured").hide(100);
+					}
+				}
+			});
+			
+			$("#nav-Marketing").on({
+				'click': function() {
+					var width = $(window).width();
+					if(width<768){
+						var clas = ($('#down3').attr('class') === 'fas fa-chevron-down')
+							? 'fas fa-chevron-up'
+							: 'fas fa-chevron-down';
+						$("#down3").attr('class', clas);
+						$("#down1,#down2,#down,#down4").attr('class', 'fas fa-chevron-down');
+						$("#menu-online-marketing").toggle(100);
+						$("#menu-blog-menu,#menu-ecommerce-audits,#menu-magento,#menu-featured").hide(100);
+					}
+				}
+			});
+			
+			$("#nav-Featured").on({
+				'click': function() {
+					var width = $(window).width();
+					if(width<768){
+						var clas = ($('#down4').attr('class') === 'fas fa-chevron-down')
+							? 'fas fa-chevron-up'
+							: 'fas fa-chevron-down';
+						$("#down4").attr('class', clas);
+						$("#down1,#down2,#down3,#down").attr('class', 'fas fa-chevron-down');
+						$("#menu-featured").toggle(100);
+						$("#menu-blog-menu,#menu-ecommerce-audits,#menu-magento,#menu-online-marketing").hide(100);
+					}
+				}
+			});
+		});
+		
+	</script>
+</head>
+	
+
+<body style="">
+	<header id="header" class="header">
+		<div class="header-grid" style="">
+			<a class="header-logo" href="index.html" title="Inchoo" rel="home">Inchoo</a>
+		 	<div id="js-menu" class="menu" role="menu">
+			  	<ul id="menu-header-menu" class="menu-list">
+				  	<li class="menu-item"><a class="link-color-8c8c8e" href="index.html">Home</a></li>
+					<li class="menu-item"><a class="link-color-8c8c8e" href="index-blog.html">Blog</a></li>
+					<li class="menu-item"><a class="link-color-8c8c8e" href="#">Portfolio</a></li>
+					<li class="menu-item"><a class="link-color-8c8c8e" href="#">Services</a></li>
+					<li class="menu-item"><a class="link-color-8c8c8e" href="index-About.html">About</a></li>
+					<li class="menu-item"><a class="link-color-8c8c8e" href="index-Contact.html">Contact</a></li>
+				</ul>      
+			</div>
+		  	<button type="button" class="header-btn header-btn-search">
+				<i id="btn-search" class="fas fa-search" style="color:#000000"></i>
+				<span>Search</span>
+			</button>
+		  	<button type="button" class="header-btn header-btn-contact">
+				<a class="link-hire" href="index-hire-us.html">
+				<i class="far fa-envelope"></i>
+				<span>Hire us</span></a></button>
+		  	<button type="button" class="header-btn header-btn-menu">
+				<i id="btn-menu" class="fas fa-bars" style="color:#000000"></i><br>
+				<span>Menu</span>
+			</button>
+		</div>
+  	</header>
+	<main class="main">
+		<form class="search-form">
+			<div>
+				<input type="search" id="search-text" class="input-text search-form-input" value="" name="s" placeholder="Search here...">
+			</div>
+		</form>
+			<div class="content content-services" data-spy="scroll" data-target="#services-sections-nav">
+
+  <!-- Page Title -->
+  <div class="o-page-title__container">
+    <div class="o-page-title">
+      <h1>Sell online with help from eCommerce specialists!</h1>
+      <p>Whether you're launching an online store, want to take your current site to the next level, or need someone to consult about eCommerce, Inchoo has the services and expertise you need!</p>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="services-intro">
+      <div class="services-intro__container">
+        <a href="#analyse" class="o-services-intro__item">I want to <span>improve my online store</span></a>
+        <a href="#dev-cons" class="o-services-intro__item">I want to <span>start my online business</span></a>
+        <a href="#marketing" class="o-services-intro__item active">I need <span>eCommerce marketing services</span></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scrollto-area">
+
+    <!-- Sticky Side Navigation -->
+    <div class="o-services-sections-nav" id="services-sections-nav">
+      <ul class="o-services-sections-nav__list">
+        <li>
+          <a href="#analyse" title="Improve your online store" class="">Improve your online store</a>
+        </li>
+        <li>
+          <a href="#dev-cons" title="Start your own business" class="">Start your own business</a>
+        </li>
+        <li>
+          <a href="#marketing" title="Get marketing services" class="active">Get marketing services</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section Analysis -->
+    <div class="page-section services-analyse scrollto-section" id="analyse">
+      <div class="o-page-section-title__container">
+        <h2 class="o-page-section-title">eCommerce Analysis</h2>
+      </div>
+      <div class="services-analyse__container">
+        <div class="services-analyse__border"></div>
+        <a href="index-seo-audit.html" class="c-learn-more-box" title="SEO Audit">
+          <h3 class="h2 c-learn-more-box__title">SEO Audit</h3>
+          <p class="c-learn-more-box__text">Hire our experts to get individual non-automated analysis of the state of your store's technical SEO.</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+        <a href="#" class="c-learn-more-box" title="Technical Audit">
+          <h3 class="h2 c-learn-more-box__title">Technical Audit</h3>
+          <p class="c-learn-more-box__text">Find out what's causing your store's problems with performance, security and stability.</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+        <a href="#" class="c-learn-more-box" title="UX / UI Audit">
+          <h3 class="h2 c-learn-more-box__title">UX / UI Audit</h3>
+          <p class="c-learn-more-box__text">Get a detailed analysis of your store's usability and expert advice on changes that will improve your customer experience.</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+        <a href="#" class="c-learn-more-box" title="PPC Audit">
+          <h3 class="h2 c-learn-more-box__title">PPC Audit</h3>
+          <p class="c-learn-more-box__text">Our certified PPC eCommerce experts can analyze your current PPC setup and improve your return on investment.</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+        <a href="#" class="c-learn-more-box" title="Google Analytics Audit">
+          <h3 class="h2 c-learn-more-box__title">Google Analytics Audit</h3>
+          <p class="c-learn-more-box__text">Get your Google Analytics setup on-track, understand your data to make better business decisions and improve your website's conversion rate!</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+        <a href="#" class="c-learn-more-box c-learn-more-box--colored" title="Not sure of your needs or already made up your mind?">
+          <h3 class="h2 c-learn-more-box__title">Not sure of your needs or already made up your mind?</h3>
+          <p class="c-learn-more-box__text">We're here to help!<br>Leave us a message and we'll get back to you!</p>
+          <button type="button" class="btn-gray"><i class="far fa-envelope"></i> <span>Contact Us</span></button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Section Development & Consulting -->
+    <div class="page-section services-dev-cons scrollto-section" id="dev-cons">
+      <div class="o-page-section-title__container">
+        <h2 class="o-page-section-title">eCommerce Development &amp; Consulting</h2>
+      </div>
+      <div class="services-dev-cons__container">
+        <div class="services-dev-cons__item-cont">
+          <div class="services-dev-cons__item">
+            <h3 class="h2 services-dev-cons__item-title">
+              <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/magento-service-logo.svg" alt="Magento">
+              <a href="https://inchoo.net/services/magento/" title="Magento">Magento</a>
+            </h3>
+            <p class="services-dev-cons__item-text">Powerful and agile open source platform with high number of B2C built-in functionalities and huge 3rd party extension selection.</p>
+            <div class="services-dev-cons__item-certifications">
+              <picture>
+                <source type="image/webp" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-devplus@2x.webp">
+                <source type="image/png" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-devplus@2x.png">
+                <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-devplus@2x.png" alt="Magento Developer Plus">
+              </picture>
+
+              <picture>
+                <source type="image/webp" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-front@2x.webp">
+                <source type="image/png" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-front@2x.png">
+                <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-front@2x.png" alt="Magento Frontend Developer">
+              </picture>
+
+              <picture>
+                <source type="image/webp" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-ss@2x.webp">
+                <source type="image/png" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-ss@2x.png">
+                <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-ss@2x.png" alt="Magento Solution Specialist">
+              </picture>
+
+              <picture>
+                <source type="image/webp" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-magento-2-solution-specialist.webp">
+                <source type="image/png" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-magento-2-solution-specialist.png">
+                <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/badges/badge-magento-2-solution-specialist.png" alt="Magento 2 Solution Specialist">
+              </picture>
+
+              <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/badges/professional_solutions_partner_v.svg" alt="Magento Professional Solutions Partner">
+
+            </div>
+            <div class="services-dev-cons__item-links">
+              <a href="https://inchoo.net/services/magento-development/" title="Magento development">Magento development <i class="icon-chevron-right"></i></a>
+              <a href="https://inchoo.net/services/migration-magento-2/" title="Migration to Magento 2">Migration to Magento 2 <i class="icon-chevron-right"></i></a>
+              <a href="https://inchoo.net/services/magento-design/" title="Magento Design">Magento design <i class="icon-chevron-right"></i></a>
+            </div>
+            <a href="https://inchoo.net/services/magento-development/" class="btn btn-green" title="Learn more">Learn more</a>
+          </div>
+        </div>
+        <div class="services-dev-cons__item-cont">
+          <picture>
+            <source type="image/webp" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/inchoo-homepage-images/development-home-img_01.webp">
+            <source type="image/png" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/inchoo-homepage-images/development-home-img_01.png">
+            <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/inchoo-homepage-images/development-home-img_01.png" alt="">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Marketing -->
+    <div class="page-section services-marketing scrollto-section" id="marketing">
+      <div class="o-page-section-title__container">
+        <h2 class="o-page-section-title">eCommerce Marketing</h2>
+      </div>
+      <div class="services-marketing__container">
+        <div class="services-marketing__border"></div>
+        <div class="c-learn-more-box c-learn-more-box--colored">
+          <h3 class="c-learn-more-box__title">Recognized experts for managing your eCommerce campaigns!</h3>
+          <picture>
+            <source type="image/webp" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/g_premier_partner.webp">
+            <source type="image/png" srcset="https://inchoo.net/wp-content/themes/inchoo4/images/g_premier_partner.png">
+            <img loading="lazy" class="services-marketing__google-parnter-img" src="https://inchoo.net/wp-content/themes/inchoo4/images/g_premier_partner.png" alt="" width="265">
+          </picture>
+        </div>
+        <a href="https://inchoo.net/services/ecommerce-ppc-management/" class="c-learn-more-box" title="PPC">
+          <h3 class="c-learn-more-box__title">PPC</h3>
+          <p class="c-learn-more-box__text">We understand both eCommerce and search engine marketing. With our help, get the best ROI from your PPC campaigns!</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+        <a href="https://inchoo.net/services/google-shopping/" class="c-learn-more-box" title="Google Shopping">
+          <h3 class="c-learn-more-box__title">Google Shopping</h3>
+          <p class="c-learn-more-box__text">Google Shopping can help online retailers of all sizes boost their sales/revenue. We're here to help you grow your business.</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+        <a href="https://inchoo.net/services/magento-advanced-analytics-google-tag-manager/" class="c-learn-more-box" title="Advanced Analytics">
+          <h3 class="c-learn-more-box__title">Advanced Analytics</h3>
+          <p class="c-learn-more-box__text">Get deep insights into how users flow through your store and use them for remarketing and sales increase!</p>
+          <button type="button" class="btn-green">Learn More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <!-- Section Explore -->
+    <div class="page-section--with-bg services-explore">
+      <div class="services-explore__container">
+        <h2 class="services-explore__title">Integration services and systems</h2>
+        <div class="services-explore__item">
+          <a href="https://inchoo.net/services/fastly/" title="Fastly">
+            <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/fastly.svg" alt="Fastly">
+          </a>
+          <span>CDN to improve your store's performance</span>
+        </div>
+        <div class="services-explore__item">
+          <a href="https://inchoo.net/services/pimcore/" title="Pimcore">
+            <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/pimcore_logo.svg" alt="Pimcore">
+          </a>
+          <span>Product information management system</span>
+        </div>
+        <div class="services-explore__item services-explore__item--shipperhq">
+          <a href="https://inchoo.net/services/shipperhq/" title="ShipperHQ">
+            <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/services_shipperhq.svg" alt="ShipperHQ">
+          </a>
+          <span>Easily manage your shipping</span>
+        </div>
+        <div class="services-explore__item">
+          <a href="https://inchoo.net/services/klevu/" title="Klevu">
+            <img loading="lazy" src="https://inchoo.net/wp-content/themes/inchoo4/images/klevu_logo.svg" alt="Klevu">
+          </a>
+          <span>Powerful and advanced search engine</span>
+        </div>
+      </div>
+    </div>
+    <div class="hp__featured-work-2 page-section">
+				<div class="o-page-section-title__container">
+				</div>
+				<div id="slides-2" class="carousel" data-ride="carousel">
+					<ul class="carousel-indicators slide-2">
+						<li data-target="#slides-2" data-slide-to="0" ><i class="far fa-circle slide-img-1"></i></li>
+						<li data-target="#slides-2" data-slide-to="1" ><i class="far fa-circle slide-img-1"></i></li>
+						<li data-target="#slides-2" data-slide-to="2" ><i class="far fa-circle slide-img-1"></i></li>
+						<li data-target="#slides-2" data-slide-to="3" ><i class="far fa-circle slide-img-1"></i></li>
+						<li data-target="#slides-2" data-slide-to="4" ><i class="far fa-circle slide-img-1"></i></li>
+						<li data-target="#slides-2" data-slide-to="5" ><i class="far fa-circle slide-img-1"></i></li>
+					</ul>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+						  <img src="images/google_concealing-inchoo-615x243.jpg" width="100%" alt="Los Angeles">
+						  <div class="carousel-caption">
+							<h3>Los Angeles</h3>
+							<p>We had such a great time in LA!</p>
+						  </div>   
+						</div>
+						<div class="carousel-item">
+						  <img src="images/schema-markup-ecommerce_inchoo-615x243.jpg" width="100%" alt="Chicago">
+						  <div class="carousel-caption">
+							<h3>Chicago</h3>
+							<p>Thank you, Chicago!</p>
+						  </div>   
+						</div>
+						<div class="carousel-item">
+						  <img src="images/seo-vs-ppc-structured-data-markup-for-product-variants-inchoo-615x243.jpg" width="100%" alt="New York">
+						  <div class="carousel-caption">
+							<h3>New York</h3>
+							<p>We love the Big Apple!</p>
+						  </div>   
+						</div>
+						<div class="carousel-item">
+						  <img src="images/not-in-buybox_inchoo-615x243.jpg" width="100%" alt="New York">
+						  <div class="carousel-caption">
+							<h3>New York</h3>
+							<p>We love!</p>
+						  </div>   
+						</div>
+						<div class="carousel-item">
+						  <img src="images/returns-mgt-inchoo-615x243.jpg" width="100%" alt="New York">
+						  <div class="carousel-caption">
+							<h3>New York</h3>
+							<p>the Big Apple!</p>
+						  </div>   
+						</div>
+						<div class="carousel-item">
+						  <img src="images/amazon-sponsored-products_inchoo-615x243.jpg" width="100%" alt="New York">
+						  <div class="carousel-caption">
+							<h3>New York</h3>
+							<p>Apple!</p>
+						  </div>   
+						</div>
+					  </div>
+					  <a class="carousel-control-prev" href="#slides-2" data-slide="prev">
+						<i class="fas fa-chevron-left"></i>
+					  </a>
+					  <a class="carousel-control-next" href="#slides-2" data-slide="next">
+				<i class="fas fa-chevron-right"></i>
+			  </a>
+				</div>
+			</div>
+    
+    
+</div>
+			
+			
+	</main>
+	<div class="hire-us">
+	  <div class="hire-us-cont">
+		<div class="hire-us-title h2">Tell us about your project</div>
+		<p class="hire-us-subtitle">Drop us a line. We'd love to know more about your project.</p>
+		<button type="button" class="btn-gray" onclick="location.href='https://inchoo.net/hire-us/'"><i class="icon-mail"></i><span>Hire us</span></button>
+	  </div>
+	</div>
+	<footer class="footer">
+      	<div id="js-accordion" class="footer-menu__container">
+        <div class="footer-menu">
+          <div id="nav-Blog" class="footer-menu__title js-accordion-toggle">Blog categories<i id="down" class="fas fa-chevron-down"></i></div>
+			  <ul id="menu-blog-menu" class="footer-menu__list js-accordion-content">
+				<li id="menu-item-23223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23223"><a href="#" id="footer-menu-item-all">All</a></li>
+				<li id="menu-item-22973" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22973"><a href="#" id="footer-menu-item-magento">Magento</a></li>
+				<li id="menu-item-23259" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23259"><a href="#" id="footer-menu-item-magento-2">Magento 2</a></li>
+				<li id="menu-item-32409" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32409"><a href="#" id="footer-menu-item-ux/ui-design" >UX/UI Design</a></li>
+				<li id="menu-item-22974" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22974"><a href="#" id="footer-menu-item-ecommerce-talk" >eCommerce Talk</a></li>
+				<li id="menu-item-22975" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22975"><a href="#" id="footer-menu-item-online-marketing">Online Marketing</a></li>
+				<li id="menu-item-22976" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22976"><a href="#" id="footer-menu-item-dev-talk">Dev Talk</a></li>
+				<li id="menu-item-22977" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22977"><a href="#" id="footer-menu-item-life-at-inchoo" >Life at Inchoo</a></li>
+			</ul>        
+		</div>
+        <div class="footer-menu">
+          <div id="nav-Audits" class="footer-menu__title js-accordion-toggle">Audits<i id="down1" class="fas fa-chevron-down"></i></div>
+          <ul id="menu-ecommerce-audits" class="footer-menu__list js-accordion-content"><li id="menu-item-30297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30297"><a title="SEO Audit" href="https://inchoo.net/services/seo-audit/" id="footer-menu-item-seo-audit" data-event="clkAction" data-action="Footer menu" data-label="SEO Audit">SEO Audit</a></li>
+<li id="menu-item-30298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30298"><a title="Technical Audit" href="https://inchoo.net/services/technical-audit/" id="footer-menu-item-technical-audit" data-event="clkAction" data-action="Footer menu" data-label="Technical Audit">Technical Audit</a></li>
+<li id="menu-item-30296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30296"><a title="Usability Audit" href="https://inchoo.net/services/ux-audit/" id="footer-menu-item-ecommerce-ux-audit" data-event="clkAction" data-action="Footer menu" data-label="eCommerce UX Audit">eCommerce UX Audit</a></li>
+<li id="menu-item-31978" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31978"><a title="PPC Audit" href="https://inchoo.net/services/ppc-audit/" id="footer-menu-item-ppc-audit-services" data-event="clkAction" data-action="Footer menu" data-label="PPC Audit Services">PPC Audit Services</a></li>
+<li id="menu-item-31979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31979"><a title="Google Analytics Audit" href="https://inchoo.net/services/google-analytics-audit/" id="footer-menu-item-google-analytics-audit" data-event="clkAction" data-action="Footer menu" data-label="Google Analytics Audit">Google Analytics Audit</a></li>
+</ul>        </div>
+        <div class="footer-menu">
+          <div id="nav-Magento" class="footer-menu__title js-accordion-toggle">Magento<i id="down2" class="fas fa-chevron-down"></i></div>
+          <ul id="menu-magento" class="footer-menu__list js-accordion-content"><li id="menu-item-34652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34652"><a title="Magento – powerful, agile and flexible eCommerce platform" href="#" id="footer-menu-item-about-magento">About Magento</a></li>
+<li id="menu-item-36189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36189"><a href="#" id="footer-menu-item-magento-website-development-process">Magento Website Development Process</a></li>
+<li id="menu-item-35609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35609"><a title="Magento 2 Development Services" href="#" id="footer-menu-item-magento-development-services">Magento Development Services</a></li>
+<li id="menu-item-36246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36246"><a href="#" id="footer-menu-item-magento-2-development">Magento 2 Development</a></li>
+<li id="menu-item-36255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36255"><a href="#" id="footer-menu-item-custom-magento-development">Custom Magento Development</a></li>
+<li id="menu-item-30348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30348"><a href="#" id="footer-menu-item-magento-2-migration-services" data-event="clkAction" data-action="Footer menu" data-label="Magento 2 Migration Services">Magento 2 Migration Services</a></li>
+<li id="menu-item-33766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33766"><a href="#" id="footer-menu-item-magento-design" >Magento Design</a></li>
+</ul>        </div>
+        <div class="footer-menu">
+          <div id="nav-Marketing" class="footer-menu__title js-accordion-toggle">Marketing<i id="down3" class="fas fa-chevron-down"></i></div>
+          <ul id="menu-online-marketing" class="footer-menu__list js-accordion-content"><li id="menu-item-30318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30318"><a title="PPC" href="#" id="footer-menu-item-ecommerce-ppc-management">eCommerce PPC Management</a></li>
+<li id="menu-item-30320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30320"><a title="Google Shopping" href="#" id="footer-menu-item-google-shopping-management">Google Shopping Management</a></li>
+<li id="menu-item-30319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30319"><a title="Google Tag Manager" href="#" id="footer-menu-item-google-tag-manager">Google Tag Manager</a></li>
+</ul>        </div>
+        <div class="footer-menu">
+          <div id="nav-Featured" class="footer-menu__title js-accordion-toggle">Featured Services<i id="down4" class="fas fa-chevron-down"></i></div>
+          <ul id="menu-featured" class="footer-menu__list js-accordion-content"><li id="menu-item-30323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30323"><a title="Fastly – improve your online store performances" href="#">Fastly</a></li>
+<li id="menu-item-30321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30321"><a title="Pimcore – product information management" href="#" id="footer-menu-item-pimcore">Pimcore</a></li>
+<li id="menu-item-31498" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31498"><a title="ShipperHQ – Managing your shipping is easy" href="#" id="footer-menu-item-shipperhq">ShipperHQ</a></li>
+<li id="menu-item-30322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30322"><a title="Klevu – a search engine like no other (and much more)" href="#" id="footer-menu-item-klevu">Klevu</a></li>
+</ul>        </div>
+      </div>
+
+    <div class="footer-hr__container"><hr></div>
+
+     <div class="footer-menu__container footer-menu__container--half">
+       <div class="footer-menu">
+         <div class="services-dev-cons__item-certifications services-dev-cons__item-certifications--footer">
+           <picture>
+             <img loading="lazy" src="images/professional_solutions_partner_white.png" alt="Magento Professional Solutions Partner" width="86">
+             <img loading="lazy" src="images/badge-magento-2-solution-specialist.png" alt="Magento Solution Specialist" width="56">
+             <img loading="lazy" src="images/badge-magento-2-professional-developer.png" alt="Magento Professional Developer" width="56">
+             <img loading="lazy" src="images/badge-magento-2-professional-frontend-developer.png" alt="Magento Professional Frontend Developer" width="56">
+            <img loading="lazy" src="images/google_premium_partner-small.png" alt="Google Premium Partner" width="126">
+           </picture>
+         </div>
+       </div>
+       <div class="footer-menu">
+         	<div class="footer-newsletter">
+           		<div class="footer-newsletter__title footer-content-left">Newsletter</div>
+           		<p class="footer-newsletter__subtitle footer-content-left">Sign up for our newsletter to get your dose of useful eCommerce, Magento and Inchoo news and events.</p>
+				<div class="footer-menu-btn footer-content-left">
+           			<a class="btn btn-green" href="#" target="_blank" rel="noopener" title="Subscribe to our newsletter">Subscribe to our newsletter</a>
+				</div>
+         </div>
+       </div>
+     </div>
+
+    <div class="footer-hr__container"><hr></div>
+
+      <ul class="footer-social-list">
+        <li><a href="https://www.facebook.com/inchoo" title="Find us on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com/inchoo" title="Follow us on Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/638004" title="Find us on LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.instagram.com/inchoonet/" title="Find us on Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      <div class="footer-contact">
+        <a href="mailto:web@inchoo.net" title="web@inchoo.net"><i class="far fa-envelope"></i>web@inchoo.net</a>
+        <a href="tel:+38531200729" title="CRO: +385 31 200 729"><i class="fas fa-phone"></i> CRO: +385 31 200 729</a>
+        <a href="tel:+18156714208" title="US: +1 815 671 4208"><i class="fas fa-phone"></i> US: +1 815 671 4208</a>
+      </div>
+      <a class="footer-back-to-top" href="#header" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+      <div class="footer-copyright">
+        2020 © Inchoo. All rights reserved. <a href="https://inchoo.net/privacy-policy/" title="Privacy &amp; Data Protection Policy">Privacy &amp; Data Protection Policy</a>
+      </div>
+  </footer>
+	<div id="js-page-overlay" class="page-overlay"></div>
+	<div id="outdated"></div>
+	<div id="js-cookie-banner" role="dialog" aria-live="polite" class="c-cookie-banner" style="display: none;">
+    <!--googleoff: all-->
+    <span class="c-cookie-banner__message">We use cookies on our website to support technical features that enhance your user experience. We also use analytics. To opt-out from analytics, <a href="https://inchoo.net/privacy-policy/" title="Click for more information">click for more information</a>.
+    </span>
+    <div class="c-cookie-banner__btn-cont">
+      <button type="button" id="js-cookie-banner__btn" class="c-cookie-banner__btn btn-green">I've read it</button>
+    </div>
+    <!--googleon: all-->
+  </div>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
